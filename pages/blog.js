@@ -20,28 +20,24 @@ export default function Blog({ posts }) {
             </div>
             <div className="mt-12 max-w-lg mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none">
               {posts.map((post) => (
-                <div className="flex flex-col rounded-lg shadow-lg overflow-hidden">
+                <a href="/article" key={post.id} className="flex flex-col rounded-lg shadow-lg overflow-hidden">
                   <div className="flex-shrink-0">
-                    <img className="h-48 w-full object-cover" src={post.properties["Image 2"].files[0] && post.properties["Image 2"].files[0].file.url} alt="" />
+                    <img className="h-48 w-full object-cover" src={post.properties["Image"].files[0] && post.properties["Image"].files[0].file.url} alt="" />
                   </div>
                   <div className="flex-1 bg-white p-6 flex flex-col justify-between">
                     <div className="flex-1">
                       <p className="text-sm font-medium text-indigo-600">
-                        <a className="hover:underline">
                         {post.properties["Tags"].multi_select[0].name}
-                        </a>
                       </p>
-                      <a className="block mt-2">
+                      <div className="block mt-2">
                         <p className="text-xl font-semibold text-gray-900">{post.properties["Title"].title[0].text.content}</p>
                         <p className="mt-3 text-base text-gray-500">{post.properties["Description"].rich_text[0].text.content}</p>
-                      </a>
+                      </div>
                     </div>
                     <div className="mt-6 flex items-center">
                       <div className="flex-shrink-0">
-                        <a >
                           <span className="sr-only">{post.properties["Edited by"].last_edited_by.name}</span>
                           <img className="h-10 w-10 rounded-full" alt="" src="https://s3-us-west-2.amazonaws.com/public.notion-static.com/f92f608a-ab8f-4bd5-9d7d-27c4e2f0064b/1628589731063.jpeg" />
-                        </a>
                       </div>
                       <div className="ml-3">
                         <p className="text-sm font-medium text-gray-900">
@@ -57,7 +53,7 @@ export default function Blog({ posts }) {
                       </div>
                     </div>
                   </div>
-                </div>
+                </a>
               ))}
             </div>
             
@@ -74,8 +70,6 @@ export async function getStaticProps() {
   const response = await notion.databases.query({
     database_id: process.env.NOTION_DATABASE_ID,
   });
-
-  console.log(response.results)
 
   return {
     props: {
