@@ -23,8 +23,6 @@ const includedFeatures = [
 ]
 
 
-
-
 export default function AboutUs() {
   return (
     <div className="main-container">
