@@ -143,7 +143,13 @@ export default function Home() {
           <h3 className="text-2xl font-extrabold text-gray-900 sm:text-3xl">£34,000</h3>
         </div>
         <input type="range" className="px-8 w-8/12 range-primary" id="pension-size" name="pension-size" min="0" max="1000000"></input>
+        <div className="m-1">
+          <p className="mt-4 text-lg text-gray-500">
+              Equivalent of...
+          </p>
+        </div>
       </div>
+
       <div className="mt-10 pb-12 bg-white sm:pb-16">
         <div className="relative">
           <div className="absolute inset-0 h-1/2 bg-gray-50" />
@@ -386,12 +392,18 @@ avoided</dt>
           <div className="absolute inset-0 h-1/2 bg-gray-100" />
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-lg mx-auto rounded-lg shadow-lg overflow-hidden lg:max-w-none lg:flex">
-              <div className="flex-1 bg-white px-6 py-8 lg:p-12">
-                <h3 className="text-2xl font-extrabold text-gray-900 sm:text-3xl">Better World Plan</h3>
-                <p className="mt-6 text-base text-gray-500">
-                  Lorem ipsum dolor sit amet consect etur adipisicing elit. Itaque amet indis perferendis blanditiis
-                  repellendus etur quidem assumenda.
+              <div className="flex-1 bg-white px-6 py-8 lg:p-12 flex-auto">
+                <div className="mt-12 sm:mx-auto sm:flex justify-between">
+                  <h3 className="text-2xl font-extrabold text-gray-900 sm:text-3xl">Better World Plan</h3>
+
+                  <h3 className="text-2xl font-extrabold text-gray-900 sm:text-3xl">£34,000</h3>
+                </div>
+                <p className="text-lg text-gray-500 text-right">
+                        Estimated pension size
                 </p>
+                <div className="m-5 mx-0">
+                  <input type="range" className="px-8 w-full range-primary" id="pension-size-fee" name="pension-size-fee" min="0" max="1000000"></input>
+                </div>
                 <div className="mt-8">
                   <div className="flex items-center">
                     <h4 className="flex-shrink-0 pr-4 bg-white text-sm tracking-wider font-semibold uppercase text-indigo-600">
@@ -425,7 +437,7 @@ avoided</dt>
                 <div className="mt-6">
                   <div className="rounded-md shadow">
                     <a
-                      href="#"
+                      href="#sign-up"
                       className="flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gray-800 hover:bg-gray-900"
                     >
                       Sign up
@@ -512,7 +524,6 @@ avoided</dt>
             </div>
           </div>
         </div>
-
         <div className="relative mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-0">
           {/* Content area */}
           <div className="pt-12 sm:pt-16 lg:pt-20">

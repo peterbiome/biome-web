@@ -90,7 +90,7 @@ function WaitingList () {
                         type="submit"
                         className="block w-full rounded-md border border-transparent px-5 py-3 bg-indigo-500 text-base font-medium text-white shadow hover:bg-indigo-400 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-indigo-600 sm:px-10"
                         >
-                        Yes, I want to invest in our planet
+                            Yes, I want to invest in our planet
                         </button>
                     </div>
                     </form>
