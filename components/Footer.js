@@ -1,13 +1,13 @@
 const navigationFooter = {
     main: [
-      { name: 'About', href: '#' },
-      { name: 'Blog', href: '#' },
+      { name: 'About', href: '/' },
+      { name: 'Blog', href: '/blog' },
       { name: 'Privacy Policy', href: '#' },
     ],
     social: [
       {
         name: 'Facebook',
-        href: '#',
+        href: 'https://www.facebook.com/Biome-102394862132772',
         icon: (props) => (
           <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
             <path
@@ -20,7 +20,7 @@ const navigationFooter = {
       },
       {
         name: 'Instagram',
-        href: '#',
+        href: 'https://www.instagram.com/biomeinvest/',
         icon: (props) => (
           <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
             <path
@@ -49,7 +49,7 @@ function Footer () {
             </nav>
             <div className="mt-8 flex justify-center space-x-6">
                 {navigationFooter.social.map((item) => (
-                <a key={item.name} href={item.href} className="text-gray-400 hover:text-gray-500">
+                <a key={item.name} href={item.href} target="_blank" className="text-gray-400 hover:text-gray-500">
                     <span className="sr-only">{item.name}</span>
                     <item.icon className="h-6 w-6" aria-hidden="true" />
                 </a>

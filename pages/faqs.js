@@ -4,6 +4,21 @@ import { ChevronDownIcon } from '@heroicons/react/outline'
 import Footer from '../components/Footer'
 import WaitingList from '../components/WaitingList'
 import Header from '../components/Header'
+import Head from 'next/head'
+
+// export async function getStaticProps() {
+//   const notion = new Client({ auth: process.env.NOTION_API_KEY });
+//   const response = await notion.databases.query({
+//     database_id: process.env.NOTION_DATABASE_ID_FAQS,
+//   });
+
+//   return {
+//     props: {
+//       faqs_: response.results,
+//     },
+//     revalidate: 1,
+//   };
+// }
 
 const faqs = [
   {
@@ -50,8 +65,13 @@ function classNames(...classes) {
 
 
 export default function Faqs() {
+
     return ( 
         <div className="main-container">
+        <Head>
+          <title>Biome - Invest in our Plant</title>
+          <link rel="icon" href="/favicon.ico" />
+        </Head>
         <Header/>
             <div className="bg-gray-50">
                 <div className="max-w-7xl mx-auto py-12 px-4 sm:py-16 sm:px-6 lg:px-8">

@@ -1,9 +1,48 @@
 
-import Footer from '../components/Footer'
-import WaitingList from '../components/WaitingList'
-import Header from '../components/Header'
-import { Client } from '@notionhq/client';
+import Footer from '../../components/Footer'
+import WaitingList from '../../components/WaitingList'
+import Header from '../../components/Header'
+import { Client } from '@notionhq/client'
+import Head from 'next/head'
 
+export const getStaticPaths = async () => {
+
+    const notion = new Client({ auth: process.env.NOTION_API_KEY });
+    const response = await notion.databases.query({
+      database_id: process.env.NOTION_DATABASE_ID,
+    });
+
+    const paths = response.results.map(path => {
+
+        return  {
+            params: { id: path.id.toString() }
+
+        }
+    })
+    
+    return {
+        paths,
+        fallback: false
+    }
+}
+
+
+export async function getStaticProps(context) {
+    const id = context.params.id
+    const notion = new Client({ auth: process.env.NOTION_API_KEY });
+    const response = await notion.blocks.children.list({
+        block_id: id,
+        page_size: 50,
+      });
+
+
+    return {
+      props: {
+        page: response.results,
+      },
+      revalidate: 1,
+    };
+}
 
 export default function Article({ page }) {
 
@@ -38,6 +77,10 @@ export default function Article({ page }) {
     
     return ( 
         <div className="main-container">
+        <Head>
+          <title>Biome - Invest in our Plant</title>
+          <link rel="icon" href="/favicon.ico" />
+        </Head>
         <Header/>
         <div className="relative py-16 bg-white overflow-hidden">
             <div className="hidden lg:block lg:absolute lg:inset-y-0 lg:h-full lg:w-full">
@@ -111,7 +154,7 @@ export default function Article({ page }) {
                 <div className="text-lg max-w-prose mx-auto">
                     <h1>
                         <span className="block text-base text-center text-indigo-600 font-semibold tracking-wide uppercase">
-                        Introducing
+                            Introducing
                         </span>
                         <span className="mt-2 block text-3xl text-center leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
                             Title
@@ -121,12 +164,12 @@ export default function Article({ page }) {
                         <figure>
                             <img
                             className="w-full rounded-lg"
-                            src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&auto=format&fit=facearea&w=1310&h=873&q=80&facepad=3"
+                            src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/2f6aa5c2-16ba-4b1b-8418-c6e4582af00f/samuel-scrimshaw-DMcI0cmYJYk-unsplash.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20211202%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20211202T164848Z&X-Amz-Expires=86400&X-Amz-Signature=2b1da74234299a781537939b59587bcd607aee862b5fcb61af5884599e2bb5ab&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22samuel-scrimshaw-DMcI0cmYJYk-unsplash.jpg%22&x-id=GetObject"
                             alt=""
                             width={1310}
                             height={873}
                             />
-                            <figcaption>Sagittis scelerisque nulla cursus in enim consectetur quam.</figcaption>
+                            <figcaption>This is a caption of a figure (not dynamic yet)</figcaption>
                         </figure>
                     </div>
                     </div>
@@ -138,17 +181,3 @@ export default function Article({ page }) {
     )
 }
 
-export async function getStaticProps() {
-    const notion = new Client({ auth: process.env.NOTION_API_KEY });
-    const response = await notion.blocks.children.list({
-        block_id: "3797d457d5c343ff9487a6fc5efdc7c3",
-        page_size: 50,
-      });
-
-    return {
-      props: {
-        page: response.results,
-      },
-      revalidate: 1,
-    };
-}
