@@ -1,4 +1,20 @@
+import { useState } from 'react'
+// import addContact from '../pages/api/hello'
+
 function WaitingList () {
+
+    // Setting details from form changing
+    const [firstName, setFirstName] = useState('')
+    const [lastName, setLastName] = useState('')
+    const [email, setEmail] = useState('')
+
+    // Tring to send email but get fs error "https://stackoverflow.com/questions/64926174/module-not-found-cant-resolve-fs-in-next-js-application"
+    const handleSubmit = (e) => {
+        e.preventDefault()
+        console.log('Sending')
+        // addContact(email, firstName, lastName)
+    }
+  
     return (
         <div className="bg-white py-16 sm:py-24" id="sign-up">
             <div className="relative sm:py-16">
@@ -57,10 +73,11 @@ function WaitingList () {
                             First
                         </label>
                         <input
-                        id="cta-email"
-                        type="email"
+                        id="first"
+                        type="text"
                         className="block w-full border border-transparent rounded-md px-5 py-3 text-base text-gray-900 placeholder-gray-500 shadow-sm focus:outline-none focus:border-transparent focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-indigo-600"
                         placeholder="First"
+                        onChange={(e)=>{setFirstName(e.target.value)}}
                         />
                     </div>
                     <div className="min-w-0 mt-4 sm:mt-0 sm:ml-3 flex-1">
@@ -68,10 +85,11 @@ function WaitingList () {
                             Last
                         </label>
                         <input
-                        id="cta-email"
-                        type="email"
+                        id="last"
+                        type="text"
                         className="block w-full border border-transparent rounded-md px-5 py-3 text-base text-gray-900 placeholder-gray-500 shadow-sm focus:outline-none focus:border-transparent focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-indigo-600"
                         placeholder="Last"
+                        onChange={(e)=>{setLastName(e.target.value)}} 
                         />
                     </div>
                     <div className="min-w-0 mt-4 sm:mt-0 sm:ml-3 flex-1">
@@ -83,12 +101,14 @@ function WaitingList () {
                         type="email"
                         className="block w-full border border-transparent rounded-md px-5 py-3 text-base text-gray-900 placeholder-gray-500 shadow-sm focus:outline-none focus:border-transparent focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-indigo-600"
                         placeholder="Email"
+                        onChange={(e)=>{setEmail(e.target.value)}}
                         />
                     </div>
                     <div className="mt-4 sm:mt-0 sm:ml-3">
                         <button
                         type="submit"
                         className="block w-full rounded-md border border-transparent px-5 py-3 bg-indigo-500 text-base font-medium text-white shadow hover:bg-indigo-400 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-indigo-600 sm:px-10"
+                        onClick={(e)=>{handleSubmit(e)}}
                         >
                             Yes, I want to invest in our planet
                         </button>
