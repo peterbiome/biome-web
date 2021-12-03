@@ -1,4 +1,9 @@
 function WaitingList () {
+
+    // const [firstName, setFirstName] = useState('')
+    // const [lastName, setLastName] = useState('')
+    // const [email, setEmail] = useState('')
+
     return (
         <div className="bg-white py-16 sm:py-24" id="sign-up">
             <div className="relative sm:py-16">

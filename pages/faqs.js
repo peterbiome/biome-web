@@ -5,66 +5,40 @@ import Footer from '../components/Footer'
 import WaitingList from '../components/WaitingList'
 import Header from '../components/Header'
 import Head from 'next/head'
+import { Client } from '@notionhq/client';
 
-// export async function getStaticProps() {
-//   const notion = new Client({ auth: process.env.NOTION_API_KEY });
-//   const response = await notion.databases.query({
-//     database_id: process.env.NOTION_DATABASE_ID_FAQS,
-//   });
+export async function getStaticProps() {
+  const notion = new Client({ auth: process.env.NOTION_API_KEY });
+  const response = await notion.databases.query({
+    database_id: process.env.NOTION_DATABASE_ID_FAQS,
+  });
 
-//   return {
-//     props: {
-//       faqs_: response.results,
-//     },
-//     revalidate: 1,
-//   };
-// }
-
-const faqs = [
-  {
-    question: "What happens to my pension is Biome goes bust?",
-    answer:
-      "I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.",
-  },
-  {
-    question: "Isn't it better to have multiple pension pots?",
-    answer:
-      "I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.",
-  },
-  {
-    question: "What are the expected returns for green funds compared to normal funds?",
-    answer:
-      "I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.",
-  },
-  {
-    question: "What are green pensions?",
-    answer:
-      "I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.",
-  },
-  {
-    question: "How does Biome make money?",
-    answer:
-      "I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.",
-  },
-  {
-    question: "What are the fees?",
-    answer:
-      "I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.",
-  },
-  {
-    question: "Should I trust Biome with my pension?",
-    answer:
-      "I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.",
-  },
-  // More questions...
-]
+  return {
+    props: {
+      faqsArray: response.results,
+    },
+    revalidate: 1,
+  };
+}
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
 
-export default function Faqs() {
+export default function Faqs(faqsArray) {
+
+    let faqs = []
+
+    faqsArray['faqsArray'].forEach(faq => {
+      if (faq.properties["Status"].select.name === "Live") {
+        const questions_answer = {
+          question: faq.properties["Question"].title[0].plain_text,
+          answer: faq.properties["Answer"].rich_text[0].plain_text,
+        }
+        faqs.push(questions_answer)
+      }
+    })
 
     return ( 
         <div className="main-container">
