@@ -59,9 +59,8 @@ export default function Home() {
       const underFee = fees.baillieGifford.threshold * fees.baillieGifford.under
       const overFee = (event.target.value - fees.baillieGifford.threshold) * fees.baillieGifford.over
       const totalFee = underFee + overFee
-      console.log(totalFee)
       const percentageFee = totalFee / event.target.value * 100
-      console.log(event.target.value)
+      
       setFee(roundToHundredth(percentageFee))
 
     } else {
