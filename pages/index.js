@@ -1,7 +1,5 @@
 import Head from 'next/head'
 import {
-  InboxIcon,
-  SparklesIcon,
   CheckCircleIcon,
   SwitchHorizontalIcon,
   EyeIcon,
@@ -12,13 +10,7 @@ import {
 import Footer from '../components/Footer'
 import WaitingList from '../components/WaitingList'
 import Header from '../components/Header'
-
-const stats = [
-    { label: 'Founded', value: '2021' },
-    { label: 'Employees', value: '5' },
-    { label: 'Beta Users', value: '521' },
-    { label: 'Raised', value: '$25M' },
-  ]
+import React, { useState } from 'react';
 
 const includedFeatures = [
     'No exit fees',
@@ -28,6 +20,56 @@ const includedFeatures = [
 ]
 
 export default function Home() {
+
+  const [drinkingWater, setdrinkingWater] = useState(23543)
+  const [co2, setCo2] = useState(4324)
+  const [trees, setTrees] = useState(12453)
+  const [pensionSize, setPensionSize] = useState(19000)
+  const [fee, setFee] = useState(0.75)
+
+  const multipliers = {
+    drinkingWater: 0.2,
+    co2: 0.003,
+    trees:0.008,
+  }
+
+  const fees = {
+    baillieGifford: {
+      under: 0.0075,
+      over: 0.005,
+      threshold: 100000,
+    }
+  }
+
+  function numberWithCommas(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  }
+  const roundToHundredth = (value) => {
+    return Number(value.toFixed(2));
+  };
+
+  function handleChange(event) {
+    setPensionSize(event.target.value);
+    setCo2(Math.round(event.target.value * multipliers.co2))
+
+    setTrees(Math.round(event.target.value * multipliers.trees))
+    setdrinkingWater(Math.round(event.target.value * multipliers.drinkingWater))
+    if (event.target.value > fees.baillieGifford.threshold) {
+
+      const underFee = fees.baillieGifford.threshold * fees.baillieGifford.under
+      const overFee = (event.target.value - fees.baillieGifford.threshold) * fees.baillieGifford.over
+      const totalFee = underFee + overFee
+      console.log(totalFee)
+      const percentageFee = totalFee / event.target.value * 100
+      console.log(event.target.value)
+      setFee(roundToHundredth(percentageFee))
+
+    } else {
+      setFee(0.75)
+    }
+    
+  }
+
   return (
       <div className="main-container">
         <Head>
@@ -140,9 +182,9 @@ export default function Home() {
           <p className="mt-4 text-lg text-gray-500">
               Estimated pension size
           </p>
-          <h3 className="text-2xl font-extrabold text-gray-900 sm:text-3xl">£34,000</h3>
+          <h3 className="text-2xl font-extrabold text-gray-900 sm:text-3xl">£{numberWithCommas(pensionSize)}</h3>
         </div>
-        <input type="range" className="px-8 w-8/12 range-primary" id="pension-size" name="pension-size" min="0" max="1000000"></input>
+        <input type="range" value={pensionSize} onChange={handleChange} className="px-8 w-8/12 range-primary" id="pension-size" name="pension-size" min="0" max="200000"></input>
         <div className="m-1">
           <p className="mt-4 text-lg text-gray-500">
               Equivalent of...
@@ -159,16 +201,16 @@ export default function Home() {
                 <div className="flex flex-col border-b border-gray-100 p-6 text-center sm:border-0 sm:border-r">
                   <dt className="order-2 mt-2 text-lg leading-6 font-medium text-gray-500">Litres of drinking water
 saved</dt>
-                  <dd className="order-1 text-5xl font-extrabold text-indigo-600">132,095</dd>
+                  <dd className="order-1 text-5xl font-extrabold text-indigo-600">{numberWithCommas(drinkingWater)}</dd>
                 </div>
                 <div className="flex flex-col border-t border-b border-gray-100 p-6 text-center sm:border-0 sm:border-l sm:border-r">
                   <dt className="order-2 mt-2 text-lg leading-6 font-medium text-gray-500">Metrics tons of CO2
 avoided</dt>
-                  <dd className="order-1 text-5xl font-extrabold text-indigo-600">12</dd>
+                  <dd className="order-1 text-5xl font-extrabold text-indigo-600">{numberWithCommas(co2)}</dd>
                 </div>
                 <div className="flex flex-col border-t border-gray-100 p-6 text-center sm:border-0 sm:border-l">
                   <dt className="order-2 mt-2 text-lg leading-6 font-medium text-gray-500">Trees planted</dt>
-                  <dd className="order-1 text-5xl font-extrabold text-indigo-600">10,340</dd>
+                  <dd className="order-1 text-5xl font-extrabold text-indigo-600">{numberWithCommas(trees)}</dd>
                 </div>
               </dl>
             </div>
@@ -396,13 +438,13 @@ avoided</dt>
                 <div className="mt-12 sm:mx-auto sm:flex justify-between">
                   <h3 className="text-2xl font-extrabold text-gray-900 sm:text-3xl">Better World Plan</h3>
 
-                  <h3 className="text-2xl font-extrabold text-gray-900 sm:text-3xl">£34,000</h3>
+                  <h3 className="text-2xl font-extrabold text-gray-900 sm:text-3xl">£{numberWithCommas(pensionSize)}</h3>
                 </div>
                 <p className="text-lg text-gray-500 text-right">
                         Estimated pension size
                 </p>
                 <div className="m-5 mx-0">
-                  <input type="range" className="px-8 w-full range-primary" id="pension-size-fee" name="pension-size-fee" min="0" max="1000000"></input>
+                  <input type="range" value={pensionSize} onChange={handleChange} className="px-8 w-full range-primary" id="pension-size-fee" name="pension-size-fee" min="0" max="200000"></input>
                 </div>
                 <div className="mt-8">
                   <div className="flex items-center">
@@ -423,10 +465,10 @@ avoided</dt>
                   </ul>
                 </div>
               </div>
-              <div className="py-8 px-6 text-center bg-gray-50 lg:flex-shrink-0 lg:flex lg:flex-col lg:justify-center lg:p-12">
+              <div className="pt-0 px-6 text-center bg-gray-50 lg:flex-shrink-0 lg:flex lg:flex-col lg:justify-center lg:p-12">
                 <p className="text-lg leading-6 font-medium text-gray-900">Better World Plan</p>
                 <div className="mt-4 flex items-center justify-center text-5xl font-extrabold text-gray-900">
-                  <span>0.59</span>
+                  <span>{fee}</span>
                   <span className="ml-3 text-xl font-medium text-gray-500">%</span>
                 </div>
                 <p className="mt-4 text-sm">
