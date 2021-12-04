@@ -7,15 +7,18 @@ import {
     InboxIcon,
     AnnotationIcon,
     ChatAlt2Icon,
+    GlobeIcon,
+    CurrencyPoundIcon,
     QuestionMarkCircleIcon,
   } from '@heroicons/react/outline'
 
+  
 function classNames(...classes) {
 return classes.filter(Boolean).join(' ')
 }
 
 const navigation = [
-    { name: 'About Us', href: '/about-us' },
+    { name: 'About Us', href: '/' },
     { name: 'Blog', href: '/blog' },
     { name: 'FAQs', href: '/faqs' },
   ]
@@ -24,14 +27,14 @@ const solutions = [
     {
       name: 'Impact of green pensions',
       description: 'How much impact does this really have? See our in depth analysis',
-      href: '#',
-      icon: InboxIcon,
+      href: '/blog/b3b0fd72-33dc-48be-98ff-19cca6eaf789?t=Impact%20of%20green%20pensions',
+      icon: GlobeIcon,
     },
     {
       name: 'Our green plans',
       description: 'See our plans on offer and their fees',
-      href: '#',
-      icon: AnnotationIcon,
+      href: '/blog/b1cea878-3cb5-41b4-849d-76f8be8f462f?t=Our%20green%20plans',
+      icon: CurrencyPoundIcon,
     },
 ]
 
@@ -41,7 +44,7 @@ function Header () {
             <Popover className="relative bg-white">
                 <div className="flex justify-between items-center max-w-7xl mx-auto px-4 py-6 sm:px-6 md:justify-start md:space-x-10 lg:px-8">
                     <div className="flex justify-start lg:w-0 lg:flex-1">
-                    <a href="#">
+                    <a href="/">
                         <span className="sr-only">Workflow</span>
                         <img
                         className="h-8 w-auto sm:h-10"
@@ -122,7 +125,7 @@ function Header () {
                         Sign in
                     </a> */}
                     <a
-                        href="#"
+                        href="#sign-up"
                         className="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700"
                     >
                         Sign up
@@ -191,7 +194,7 @@ function Header () {
                         </div>
                         <div className="mt-6">
                             <a
-                            href="#"
+                            href="#sign-up"
                             className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700"
                             >
                             Join waiting list
