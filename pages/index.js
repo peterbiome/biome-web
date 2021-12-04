@@ -60,7 +60,7 @@ export default function Home() {
       const overFee = (event.target.value - fees.baillieGifford.threshold) * fees.baillieGifford.over
       const totalFee = underFee + overFee
       const percentageFee = totalFee / event.target.value * 100
-      
+
       setFee(roundToHundredth(percentageFee))
 
     } else {
@@ -72,7 +72,7 @@ export default function Home() {
   return (
       <div className="main-container">
         <Head>
-          <title>Biome - Invest in our Plant</title>
+          <title>Biome - Invest in our Planet</title>
           <link rel="icon" href="/favicon.ico" />
         </Head>
         <div className="bg-white">
