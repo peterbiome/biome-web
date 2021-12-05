@@ -31,7 +31,7 @@ export default function Faqs(faqsArray) {
     let faqs = []
 
     faqsArray['faqsArray'].forEach(faq => {
-      if (faq.properties["Status"].select.name === "Live") {
+      if (faq.properties["Status"].select?.name === "Live") {
         const questions_answer = {
           question: faq.properties["Question"].title[0].plain_text,
           answer: faq.properties["Answer"].rich_text[0].plain_text,
