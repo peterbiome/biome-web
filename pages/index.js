@@ -129,7 +129,7 @@ export default function Home() {
                     </p>
                     <div className="mt-6 grid grid-cols-2 gap-8 md:grid-cols-6 lg:grid-cols-5">
                         <div className="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
-                        <img className="h-12" src="https://tailwindui.com/img/logos/tuple-logo-gray-400.svg" alt="Tuple" />
+                        <img className="h-12" src="/OneTreePlanted_Key Logo_Long_Black.png" alt="Tuple" />
                         </div>
                         <div className="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
                         <img className="h-12" src="https://tailwindui.com/img/logos/mirage-logo-gray-400.svg" alt="Mirage" />

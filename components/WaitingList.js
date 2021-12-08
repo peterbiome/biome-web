@@ -1,8 +1,50 @@
+import React, { useState } from 'react';
+import { useRouter } from 'next/router'
+
 function WaitingList () {
 
-    // const [firstName, setFirstName] = useState('')
-    // const [lastName, setLastName] = useState('')
-    // const [email, setEmail] = useState('')
+    const [firstName, setFirstName] = useState('')
+    const [lastName, setLastName] = useState('')
+    const [email, setEmail] = useState('')
+    const router = useRouter()
+
+    const handleSubmit = (event) => {        
+        event.preventDefault()
+
+        const body = {
+            firstName: firstName,
+            lastName: lastName,
+            email: email
+        }
+
+        // Now sending email through sendgrid automation once contact is added to list
+
+        // fetch('/api/sendgrid/sendEmail', {
+        //     method: 'POST',
+        //     headers: {
+        //       'Content-Type': 'application/json',
+        //     },
+        //     body: JSON.stringify(body),
+        // })
+
+        fetch('/api/sendgrid/addContact', {
+            method: 'PUT',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(body),
+        })
+
+        fetch('/api/trees/plantTree', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(body),
+        })
+        
+        router.push('/thanks')
+    }
 
     return (
         <div className="bg-white py-16 sm:py-24" id="sign-up">
@@ -52,26 +94,27 @@ function WaitingList () {
                     <h2 className="text-3xl font-extrabold text-white tracking-tight sm:text-4xl">
                         Get notified when we&rsquo;re launching.
                     </h2>
-                    <div className="flex-auto justiy-center items-center w-48 m-5">
+                    <div className="m-10 col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
                         <img
                             src="/OneTreePlanted_Key Logo_Long_White.png"
                             alt=""
-                            />    
+                            width="200"/>    
                     </div>
                     <p className="mt-6 mx-auto max-w-2xl text-lg text-indigo-200">
                         We have partnered with One Tree Planted to plant a tree for each new sign up to our waiting list.
                     </p>
                     </div>
-                    <form action="/thanks" className="mt-12 sm:mx-auto sm:flex">
+                    <form className="mt-12 sm:mx-auto sm:flex" onSubmit={handleSubmit}>
                     <div className="min-w-0 mt-4 sm:mt-0 sm:ml-3 flex-1">
                         <label htmlFor="cta-first-name" className="sr-only">
                             First
                         </label>
                         <input
                         id="cta-email"
-                        type="email"
+                        type="text"
                         className="block w-full border border-transparent rounded-md px-5 py-3 text-base text-gray-900 placeholder-gray-500 shadow-sm focus:outline-none focus:border-transparent focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-indigo-600"
-                        placeholder="First"
+                        placeholder="First Name"
+                        onChange={e => setFirstName(e.target.value)}
                         />
                     </div>
                     <div className="min-w-0 mt-4 sm:mt-0 sm:ml-3 flex-1">
@@ -80,9 +123,10 @@ function WaitingList () {
                         </label>
                         <input
                         id="cta-email"
-                        type="email"
+                        type="text"
                         className="block w-full border border-transparent rounded-md px-5 py-3 text-base text-gray-900 placeholder-gray-500 shadow-sm focus:outline-none focus:border-transparent focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-indigo-600"
-                        placeholder="Last"
+                        placeholder="Last Name"
+                        onChange={e => setLastName(e.target.value)}
                         />
                     </div>
                     <div className="min-w-0 mt-4 sm:mt-0 sm:ml-3 flex-1">
@@ -94,6 +138,7 @@ function WaitingList () {
                         type="email"
                         className="block w-full border border-transparent rounded-md px-5 py-3 text-base text-gray-900 placeholder-gray-500 shadow-sm focus:outline-none focus:border-transparent focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-indigo-600"
                         placeholder="Email"
+                        onChange={e => setEmail(e.target.value)}
                         />
                     </div>
                     <div className="mt-4 sm:mt-0 sm:ml-3">

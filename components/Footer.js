@@ -2,7 +2,7 @@ const navigationFooter = {
     main: [
       { name: 'About', href: '/' },
       { name: 'Blog', href: '/blog' },
-      { name: 'Privacy Policy', href: '#' },
+      { name: 'Privacy Policy', href: '/privacy-policy' },
     ],
     social: [
       {
