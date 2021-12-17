@@ -194,26 +194,37 @@ export default function Article({ content, page }) {
           </div>
         </div>
         <div className="relative px-4 sm:px-6 lg:px-8">
+          <img
+            className="h-96 w-full rounded-lg object-cover"
+            src={page.cover.external.url}
+            alt="Trees"
+          />
           <div className="text-lg max-w-prose mx-auto">
             <h1>
               {/* <span className="block text-base text-center text-indigo-600 font-semibold tracking-wide uppercase">
                             Introducing
                         </span> */}
-              <span className="mt-2 block text-3xl text-center leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+              <span className="mt-20 mb-10 block text-3xl text-center leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
                 {page.properties["Title"].title[0].plain_text}
               </span>
             </h1>
             <div className="mt-6 prose prose-indigo prose-lg text-gray-500 mx-auto">
+              {getPageDisplay()}
               <figure>
                 <img
                   className="w-full rounded-lg"
-                  src={page.cover.external.url}
+                  src={page.properties["Bottom Image"].files[0].file.url}
                   alt=""
                   width={1310}
                   height={873}
                 />
               </figure>
-              {getPageDisplay()}
+              <p>
+                Would like to contribute to our blog? Get in touch at{" "}
+                <a href="mailto:benjamin@biomeinvest.com">
+                  benjamin@biomeinvest.com
+                </a>
+              </p>
             </div>
           </div>
         </div>
