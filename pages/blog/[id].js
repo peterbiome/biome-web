@@ -79,7 +79,7 @@ export default function Article({ page }) {
         <div className="main-container">
         <Head>
           <title>Biome - Invest in our Planet</title>
-          <link rel="icon" href="/favicon.ico" />
+          <link rel="icon" href="/favicon.png" />
         </Head>
         <Header/>
         <div className="relative py-16 bg-white overflow-hidden">
@@ -161,7 +161,7 @@ export default function Article({ page }) {
                             Title
                         </span>
                     </h1>
-                    <div className="mt-6 prose prose-indigo prose-lg text-gray-500 mx-auto">{getPageDisplay()}
+                    <div className="mt-6 prose prose-indigo prose-lg text-gray-500 mx-auto">
                         <figure>
                             <img
                             className="w-full rounded-lg"
@@ -170,8 +170,8 @@ export default function Article({ page }) {
                             width={1310}
                             height={873}
                             />
-                            <figcaption>This is a caption of a figure (not dynamic yet)</figcaption>
                         </figure>
+                        {getPageDisplay()}
                     </div>
                     </div>
                 </div>

@@ -10,7 +10,7 @@ export default function PrivacyPolicy() {
     <div className="main-container">
     <Head>
       <title>Biome - Invest in our Planet</title>
-      <link rel="icon" href="/favicon.ico" />
+      <link rel="icon" href="/favicon.png" />
     </Head>
     <Header/>
     <div className="relative py-16 bg-white overflow-hidden">

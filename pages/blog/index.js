@@ -25,7 +25,7 @@ export default function Blog({ posts }) {
       <div className="main-container">
         <Head>
           <title>Biome - Invest in our Planet</title>
-          <link rel="icon" href="/favicon.ico" />
+          <link rel="icon" href="/favicon.png" />
         </Head>
         <Header/>
         <div className="relative bg-gray-50 pt-16 pb-20 px-4 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8">

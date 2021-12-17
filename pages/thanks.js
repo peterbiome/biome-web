@@ -7,8 +7,6 @@ import WaitingList from '../components/WaitingList'
 import Header from '../components/Header'
 import Head from 'next/head'
 
-
-
 export default function Thanks() {
 
 
@@ -16,7 +14,7 @@ export default function Thanks() {
         <div className="main-container">
         <Head>
           <title>Biome - Invest in our Planet</title>
-          <link rel="icon" href="/favicon.ico" />
+          <link rel="icon" href="/favicon.png" />
         </Head>
         <Header/>
             <div className="bg-gray-50">

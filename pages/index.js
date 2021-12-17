@@ -73,7 +73,7 @@ export default function Home() {
       <div className="main-container">
         <Head>
           <title>Biome - Invest in our Planet</title>
-          <link rel="icon" href="/favicon.ico" />
+          <link rel="icon" href="/favicon.png" />
         </Head>
         <div className="bg-white">
             <Header/>
@@ -270,9 +270,9 @@ avoided</dt>
           <div className="mt-12 sm:mt-16 lg:mt-0">
             <div className="pl-4 -mr-48 sm:pl-6 md:-mr-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
               <img
-                className="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0 lg:h-full lg:w-auto lg:max-w-none"
-                src="https://tailwindui.com/img/component-images/inbox-app-screenshot-1.jpg"
-                alt="Inbox user interface"
+                className="w-full lg:absolute lg:left-0 lg:h-full lg:w-auto lg:max-w-none"
+                src="homepage_transfer.png"
+                alt="Transfering a your old pensions"
               />
             </div>
           </div>
@@ -308,9 +308,9 @@ avoided</dt>
           <div className="mt-12 sm:mt-16 lg:mt-0 lg:col-start-1">
             <div className="pr-4 -ml-48 sm:pr-6 md:-ml-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
               <img
-                className="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:right-0 lg:h-full lg:w-auto lg:max-w-none"
-                src="https://tailwindui.com/img/component-images/inbox-app-screenshot-2.jpg"
-                alt="Customer profile user interface"
+                className="w-full lg:absolute lg:right-0 lg:h-full lg:w-auto lg:max-w-none"
+                src="homepage_plans.png"
+                alt="Choose a pension plan"
               />
             </div>
           </div>
@@ -370,9 +370,9 @@ avoided</dt>
           <div className="mt-12 sm:mt-16 lg:mt-0">
             <div className="pl-4 -mr-48 sm:pl-6 md:-mr-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
               <img
-                className="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0 lg:h-full lg:w-auto lg:max-w-none"
-                src="https://tailwindui.com/img/component-images/inbox-app-screenshot-1.jpg"
-                alt="Inbox user interface"
+                className="w-full lg:absolute lg:left-0 lg:h-full lg:w-auto lg:max-w-none"
+                src="homepage_timeline.png"
+                alt="Track your pension progress"
               />
             </div>
           </div>
@@ -408,8 +408,8 @@ avoided</dt>
           <div className="mt-12 sm:mt-16 lg:mt-0 lg:col-start-1">
             <div className="pr-4 -ml-48 sm:pr-6 md:-ml-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
               <img
-                className="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:right-0 lg:h-full lg:w-auto lg:max-w-none"
-                src="https://tailwindui.com/img/component-images/inbox-app-screenshot-2.jpg"
+                className="w-full lg:absolute lg:right-0 lg:h-full lg:w-auto lg:max-w-none"
+                src="homepage_notify.png"
                 alt="Customer profile user interface"
               />
             </div>

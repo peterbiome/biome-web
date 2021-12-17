@@ -70,7 +70,7 @@ function WaitingList () {
             <div className="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8" >
                 <div className="relative rounded-2xl px-6 py-10 bg-indigo-600 overflow-hidden shadow-xl sm:px-12 sm:py-20">
                 <div aria-hidden="true" className="absolute inset-0 -mt-72 sm:-mt-32 md:mt-0">
-                    <svg
+                    {/* <svg
                     className="absolute inset-0 h-full w-full"
                     preserveAspectRatio="xMidYMid slice"
                     xmlns="http://www.w3.org/2000/svg"
@@ -87,7 +87,12 @@ function WaitingList () {
                         fill="currentColor"
                         d="M-217.088 544.086L1544.761 72l134.327 501.316-1761.849 472.086z"
                     />
-                    </svg>
+                    </svg> */}
+                    <img
+                        className="h-full w-full object-cover"
+                        src="/trees-hero.jpg"
+                        alt="Trees"
+                    />
                 </div>
                 <div className="relative">
                     <div className="sm:text-center">
@@ -100,7 +105,7 @@ function WaitingList () {
                             alt=""
                             width="200"/>    
                     </div>
-                    <p className="mt-6 mx-auto max-w-2xl text-lg text-indigo-200">
+                    <p className="mt-6 mx-auto max-w-2xl text-lg text-white">
                         We have partnered with One Tree Planted to plant a tree for each new sign up to our waiting list.
                     </p>
                     </div>
@@ -144,7 +149,7 @@ function WaitingList () {
                     <div className="mt-4 sm:mt-0 sm:ml-3">
                         <button
                             type="submit"
-                            className="block w-full rounded-md border border-transparent px-5 py-3 bg-indigo-500 text-base font-medium text-white shadow hover:bg-indigo-400 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-indigo-600 sm:px-10"
+                            className="block w-full rounded-md border border-transparent px-5 py-3 bg-green-600 text-base font-medium text-white shadow hover:bg-indigo-400 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-indigo-600 sm:px-10"
                             >
                                 Yes, I want to invest in our planet
                             </button>

@@ -26,7 +26,7 @@ export default function handler(req, res) {
       if (error) {
           throw new Error(error)
       } else {
-        console.log('Contact added');
+        console.log('Contact Added!');
         res.status(200).json({ message: 'Contact Added!' })
         res.end()
       };
