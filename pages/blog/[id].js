@@ -30,25 +30,40 @@ export const getStaticPaths = async () => {
 export async function getStaticProps(context) {
     const id = context.params.id
     const notion = new Client({ auth: process.env.NOTION_API_KEY });
-    const response = await notion.blocks.children.list({
-        block_id: id,
-        page_size: 50,
-      });
 
-
-    return {
-      props: {
-        page: response.results,
-      },
-      revalidate: 1,
-    };
+    try {
+        const [page, content ] = await Promise.all([
+            await notion.pages.retrieve({ page_id: id }),
+            await notion.blocks.children.list({
+                block_id: id,
+                page_size: 50,
+              }),
+        ]) 
+        return {
+          props: {
+            content: content.results,
+            page: page,
+    
+          },
+          revalidate: 1,
+        };
+    } catch(error) {
+        return {
+            props: {
+              content: null,
+              page: null,
+      
+            },
+            revalidate: 1,
+          };
+    }
 }
 
-export default function Article({ page }) {
+export default function Article({ content, page }) {
 
     const getPageDisplay = () => {
         let jsx = [];
-        page.forEach((block) => {
+        content.forEach((block) => {
           if (block.type === 'paragraph') {
             jsx.push(<p>{block.paragraph.text[0]?.plain_text}</p>);
           }
@@ -158,14 +173,14 @@ export default function Article({ page }) {
                             Introducing
                         </span> */}
                         <span className="mt-2 block text-3xl text-center leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-                            Title
+                            {page.properties['Title'].title[0].plain_text}
                         </span>
                     </h1>
                     <div className="mt-6 prose prose-indigo prose-lg text-gray-500 mx-auto">
                         <figure>
                             <img
                             className="w-full rounded-lg"
-                            src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/2f6aa5c2-16ba-4b1b-8418-c6e4582af00f/samuel-scrimshaw-DMcI0cmYJYk-unsplash.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20211202%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20211202T164848Z&X-Amz-Expires=86400&X-Amz-Signature=2b1da74234299a781537939b59587bcd607aee862b5fcb61af5884599e2bb5ab&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22samuel-scrimshaw-DMcI0cmYJYk-unsplash.jpg%22&x-id=GetObject"
+                            src={page.cover.external.url}
                             alt=""
                             width={1310}
                             height={873}

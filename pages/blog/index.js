@@ -41,7 +41,7 @@ export default function Blog({ posts }) {
             </div>
             <div className="mt-12 max-w-lg mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none">
               {posts.map((post) => (
-                <Link href={`/blog/${post.id}?t=${post.properties["Title"].title[0].text.content}`} key={post.id}>
+                <Link href={`/blog/${post.id}`} key={post.id}>
                 <a className="flex flex-col rounded-lg shadow-lg overflow-hidden">
                     <div className="flex-shrink-0">
                       <img className="h-48 w-full object-cover" src={post.properties["Image"].files[0] && post.properties["Image"].files[0].file.url} alt="" />

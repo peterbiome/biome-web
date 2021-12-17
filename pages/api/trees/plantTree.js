@@ -29,8 +29,10 @@ export default function handler(req, res) {
     };
 
     fetch("https://api.sandbox.digitalhumani.com/tree", requestOptions)
-    .then(response => response.text())
-    .then(result => console.log("Tree planted ", result))
-    .catch(error => console.log('error', error));
-    
+    .then(response => {
+      res.status(200).send({ message: response })
+    }) 
+    .catch(error => {
+      res.status(500).send({ message: error })
+    })
 }
