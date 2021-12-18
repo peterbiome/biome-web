@@ -5,6 +5,7 @@ import WaitingList from "../components/WaitingList";
 import Header from "../components/Header";
 import Head from "next/head";
 import { Client } from "@notionhq/client";
+import { makeConsoleLogger } from "@notionhq/client/build/src/logging";
 
 export async function getStaticProps() {
   const notion = new Client({ auth: process.env.NOTION_API_KEY });

@@ -39,7 +39,7 @@ export default function PrivacyPolicy() {
                     y={0}
                     width={4}
                     height={4}
-                    className="text-gray-200"
+                    className="text-primary-light"
                     fill="currentColor"
                   />
                 </pattern>
@@ -103,7 +103,7 @@ export default function PrivacyPolicy() {
                     y={0}
                     width={4}
                     height={4}
-                    className="text-gray-200"
+                    className="text-primary-light"
                     fill="currentColor"
                   />
                 </pattern>

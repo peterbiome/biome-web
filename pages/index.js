@@ -91,14 +91,16 @@ export default function Home() {
                       src="/trees-hero.jpg"
                       alt="Trees"
                     />
-                    <div className="absolute inset-0 bg-indigo-700 mix-blend-multiply" />
+                    <div className="absolute inset-0 bg-black/20" />
                   </div>
                   <div className="relative px-4 py-16 sm:px-6 sm:py-24 lg:py-32 lg:px-8">
                     <h1 className="text-center text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
                       <span className="block text-white">Invest in our</span>
-                      <span className="block text-indigo-200">Planet</span>
+                      <span className="block text-primary-verylight">
+                        Planet
+                      </span>
                     </h1>
-                    <p className="mt-6 max-w-lg mx-auto text-center text-xl text-indigo-200 sm:max-w-3xl">
+                    <p className="mt-6 max-w-lg mx-auto text-center text-xl text-white sm:max-w-3xl">
                       Easily consolidate your pensions into one simpler and
                       greener plan, with a trusted provider. Gain full
                       transparency over your pension and environmental impact.
@@ -107,7 +109,7 @@ export default function Home() {
                       <div className="space-y-4 sm:space-y-0 sm:mx-auto sm:inline-grid sm:grid-cols-1 sm:gap-5">
                         <a
                           href="#sign-up"
-                          className="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-indigo-700 bg-white hover:bg-indigo-50 sm:px-8"
+                          className="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-primary hover:text-white bg-white hover:bg-primary-light sm:px-8"
                         >
                           Join the waiting list
                         </a>
@@ -189,7 +191,7 @@ export default function Home() {
         <div className="text-center m-10">
           <div className="m-10">
             <p className="mt-4 text-lg text-gray-500">Estimated pension size</p>
-            <h3 className="text-2xl font-extrabold text-gray-900 sm:text-3xl">
+            <h3 className="text-2xl font-extrabold text-primary-light sm:text-3xl">
               £{numberWithCommas(pensionSize)}
             </h3>
           </div>
@@ -197,7 +199,7 @@ export default function Home() {
             type="range"
             value={pensionSize}
             onChange={handleChange}
-            className="px-8 w-8/12 range-primary"
+            className="px-8 w-8/12 bg-primary appearance-none w-full h-1 bg-grey rounded cursor-pointer slider-thumb"
             id="pension-size"
             name="pension-size"
             min="0"
@@ -218,7 +220,7 @@ export default function Home() {
                     <dt className="order-2 mt-2 text-lg leading-6 font-medium text-gray-500">
                       Litres of drinking water saved
                     </dt>
-                    <dd className="order-1 text-5xl font-extrabold text-indigo-600">
+                    <dd className="order-1 text-5xl font-extrabold text-primary">
                       {numberWithCommas(drinkingWater)}
                     </dd>
                   </div>
@@ -226,7 +228,7 @@ export default function Home() {
                     <dt className="order-2 mt-2 text-lg leading-6 font-medium text-gray-500">
                       Metrics tons of CO2 avoided
                     </dt>
-                    <dd className="order-1 text-5xl font-extrabold text-indigo-600">
+                    <dd className="order-1 text-5xl font-extrabold text-primary">
                       {numberWithCommas(co2)}
                     </dd>
                   </div>
@@ -234,7 +236,7 @@ export default function Home() {
                     <dt className="order-2 mt-2 text-lg leading-6 font-medium text-gray-500">
                       Trees planted
                     </dt>
-                    <dd className="order-1 text-5xl font-extrabold text-indigo-600">
+                    <dd className="order-1 text-5xl font-extrabold text-primary">
                       {numberWithCommas(trees)}
                     </dd>
                   </div>
@@ -250,7 +252,7 @@ export default function Home() {
             <div className="px-4 max-w-xl mx-auto sm:px-6 lg:py-16 lg:max-w-none lg:mx-0 lg:px-0">
               <div>
                 <div>
-                  <span className="h-12 w-12 rounded-md flex items-center justify-center bg-indigo-600">
+                  <span className="h-12 w-12 rounded-md flex items-center justify-center bg-primary">
                     <CurrencyPoundIcon
                       className="h-6 w-6 text-white"
                       aria-hidden="true"
@@ -268,7 +270,7 @@ export default function Home() {
                   <div className="mt-6">
                     <a
                       href="#"
-                      className="inline-flex px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700"
+                      className="inline-flex px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-primary hover:bg-primary-light"
                     >
                       See more
                     </a>
@@ -314,7 +316,7 @@ export default function Home() {
             <div className="px-4 max-w-xl mx-auto sm:px-6 lg:py-32 lg:max-w-none lg:mx-0 lg:px-0 lg:col-start-2">
               <div>
                 <div>
-                  <span className="h-12 w-12 rounded-md flex items-center justify-center bg-indigo-600">
+                  <span className="h-12 w-12 rounded-md flex items-center justify-center bg-primary">
                     <SwitchHorizontalIcon
                       className="h-6 w-6 text-white"
                       aria-hidden="true"
@@ -333,7 +335,7 @@ export default function Home() {
                   <div className="mt-6">
                     <a
                       href="'/blog/b1cea878-3cb5-41b4-849d-76f8be8f462f?t=Our%20green%20plans'"
-                      className="inline-flex px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700"
+                      className="inline-flex px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-primary hover:bg-primary-light"
                     >
                       See more
                     </a>
@@ -359,7 +361,7 @@ export default function Home() {
             <div className="px-4 max-w-xl mx-auto sm:px-6 lg:py-16 lg:max-w-none lg:mx-0 lg:px-0">
               <div>
                 <div>
-                  <span className="h-12 w-12 rounded-md flex items-center justify-center bg-indigo-600">
+                  <span className="h-12 w-12 rounded-md flex items-center justify-center bg-primary">
                     <EyeIcon
                       className="h-6 w-6 text-white"
                       aria-hidden="true"
@@ -423,7 +425,7 @@ export default function Home() {
             <div className="px-4 max-w-xl mx-auto sm:px-6 lg:py-32 lg:max-w-none lg:mx-0 lg:px-0 lg:col-start-2">
               <div>
                 <div>
-                  <span className="h-12 w-12 rounded-md flex items-center justify-center bg-indigo-600">
+                  <span className="h-12 w-12 rounded-md flex items-center justify-center bg-primary">
                     <BellIcon
                       className="h-6 w-6 text-white"
                       aria-hidden="true"
@@ -475,7 +477,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="mt-8 bg-white pb-16 sm:mt-12 sm:pb-20 lg:pb-28">
+        <div className="mt- bg-white pb-16 sm:mt-12 sm:pb-20 lg:pb-28">
           <div className="relative">
             <div className="absolute inset-0 h-1/2 bg-gray-100" />
             <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -486,7 +488,7 @@ export default function Home() {
                       Better World Plan
                     </h3>
 
-                    <h3 className="text-2xl font-extrabold text-gray-900 sm:text-3xl">
+                    <h3 className="text-2xl font-extrabold text-primary sm:text-3xl">
                       £{numberWithCommas(pensionSize)}
                     </h3>
                   </div>
@@ -507,7 +509,7 @@ export default function Home() {
                   </div>
                   <div className="mt-8">
                     <div className="flex items-center">
-                      <h4 className="flex-shrink-0 pr-4 bg-white text-sm tracking-wider font-semibold uppercase text-indigo-600">
+                      <h4 className="flex-shrink-0 pr-4 bg-white text-sm tracking-wider font-semibold uppercase text-primary">
                         What's included
                       </h4>
                       <div className="flex-1 border-t-2 border-gray-200" />
@@ -523,7 +525,7 @@ export default function Home() {
                         >
                           <div className="flex-shrink-0">
                             <CheckCircleIcon
-                              className="h-5 w-5 text-green-400"
+                              className="h-5 w-5 text-primary-light"
                               aria-hidden="true"
                             />
                           </div>
@@ -535,7 +537,7 @@ export default function Home() {
                     </ul>
                   </div>
                 </div>
-                <div className="pt-0 px-6 text-center bg-gray-50 lg:flex-shrink-0 lg:flex lg:flex-col lg:justify-center lg:p-12">
+                <div className="p-10 px-6 text-center bg-gray-50 lg:flex-shrink-0 lg:flex lg:flex-col lg:justify-center lg:p-12">
                   <p className="text-lg leading-6 font-medium text-gray-900">
                     Better World Plan
                   </p>
@@ -552,7 +554,7 @@ export default function Home() {
                     <div className="rounded-md shadow">
                       <a
                         href="#sign-up"
-                        className="flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gray-800 hover:bg-gray-900"
+                        className="flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-primary hover:bg-primary-light"
                       >
                         Sign up
                       </a>
@@ -576,7 +578,7 @@ export default function Home() {
               aria-hidden="true"
               className="hidden sm:block lg:absolute lg:inset-y-0 lg:right-0 lg:w-screen"
             >
-              <div className="absolute inset-y-0 right-1/2 w-full bg-gray-50 rounded-r-3xl lg:right-72" />
+              <div className="absolute inset-y-0 right-1/2 w-full bg-primary-verylight/40 rounded-r-3xl lg:right-72" />
               <svg
                 className="absolute top-8 left-1/2 -ml-3 lg:-right-8 lg:left-auto lg:top-12"
                 width={404}
@@ -598,7 +600,7 @@ export default function Home() {
                       y={0}
                       width={4}
                       height={4}
-                      className="text-gray-200"
+                      className="text-primary-light"
                       fill="currentColor"
                     />
                   </pattern>
@@ -615,11 +617,11 @@ export default function Home() {
               <div className="relative pt-64 pb-10 rounded-2xl shadow-xl overflow-hidden">
                 <img
                   className="absolute inset-0 h-full w-full object-cover"
-                  src="https://images.unsplash.com/photo-1521510895919-46920266ddb3?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&fp-x=0.5&fp-y=0.6&fp-z=3&width=1440&height=1440&sat=-100"
+                  src="/wind-farm.jpg"
                   alt=""
                 />
-                <div className="absolute inset-0 bg-indigo-500 mix-blend-multiply" />
-                <div className="absolute inset-0 bg-gradient-to-t from-indigo-600 via-indigo-600 opacity-90" />
+                <div className="absolute inset-0 bg-primary-light mix-blend-multiply" />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary opacity-90" />
                 <div className="relative px-8">
                   <div>
                     {/* <img
@@ -631,7 +633,7 @@ export default function Home() {
                   <blockquote className="mt-8">
                     <div className="relative text-lg font-medium text-white md:flex-grow">
                       <svg
-                        className="absolute top-0 left-0 transform -translate-x-3 -translate-y-2 h-8 w-8 text-indigo-400"
+                        className="absolute top-0 left-0 transform -translate-x-3 -translate-y-2 h-8 w-8 text-secondary"
                         fill="currentColor"
                         viewBox="0 0 32 32"
                         aria-hidden="true"
@@ -639,15 +641,16 @@ export default function Home() {
                         <path d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z" />
                       </svg>
                       <p className="relative">
-                        Tincidunt integer commodo, cursus etiam aliquam neque,
-                        et. Consectetur pretium in volutpat, diam. Montes, magna
-                        cursus nulla feugiat dignissim id lobortis amet.
+                        Greening your pension is 21x more
+                        effective at reducing your carbon footprint than giving
+                        up flying, going veggie and switching energy provider
+                        combined.
                       </p>
                     </div>
 
                     <footer className="mt-4">
-                      <p className="text-base font-semibold text-indigo-200">
-                        Sarah Williams, CEO at Workcation
+                      <p className="hover:underline text-base font-semibold text-primary-verylight">
+                        Research by <a href="https://www.makemymoneymatter.co.uk">Make My Money Matter</a>
                       </p>
                     </footer>
                   </blockquote>

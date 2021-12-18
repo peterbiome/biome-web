@@ -48,8 +48,8 @@ function Header() {
               <span className="sr-only">Workflow</span>
               <img
                 className="h-8 w-auto sm:h-10"
-                src="biome_icon-c1.png"
-                alt=""
+                src="/biome_horizontal-c1.png"
+                alt="Biome Logo"
               />
             </a>
           </div>
@@ -97,7 +97,7 @@ function Header() {
                               href={item.href}
                               className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
                             >
-                              <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-indigo-600 text-white sm:h-12 sm:w-12">
+                              <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-primary text-white sm:h-12 sm:w-12">
                                 <item.icon
                                   className="h-6 w-6"
                                   aria-hidden="true"
@@ -137,7 +137,7 @@ function Header() {
                     </a> */}
             <a
               href="#sign-up"
-              className="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700"
+              className="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-primary hover:bg-primary-light"
             >
               Sign up
             </a>
@@ -163,8 +163,8 @@ function Header() {
                   <div>
                     <img
                       className="h-8 w-auto"
-                      src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
-                      alt="Workflow"
+                      src="biome_icon-c1.png"
+                      alt="Biome Logo"
                     />
                   </div>
                   <div className="-mr-2">
@@ -182,7 +182,7 @@ function Header() {
                         href={item.href}
                         className="-m-3 p-3 flex items-center rounded-lg hover:bg-gray-50"
                       >
-                        <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-indigo-600 text-white">
+                        <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-primary text-white">
                           <item.icon className="h-6 w-6" aria-hidden="true" />
                         </div>
                         <div className="ml-4 text-base font-medium text-gray-900">
@@ -208,7 +208,7 @@ function Header() {
                 <div className="mt-6">
                   <a
                     href="#sign-up"
-                    className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700"
+                    className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-primary hover:bg-primary-light"
                   >
                     Join waiting list
                   </a>

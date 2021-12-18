@@ -49,7 +49,7 @@ function WaitingList() {
     <div className="bg-white py-16 sm:py-24" id="sign-up">
       <div className="relative sm:py-16">
         <div aria-hidden="true" className="hidden sm:block">
-          <div className="absolute inset-y-0 left-0 w-1/2 bg-gray-50 rounded-r-3xl" />
+          <div className="absolute inset-y-0 left-0 w-1/2 bg-primary-verylight/30 rounded-r-3xl" />
           <svg
             className="absolute top-8 left-1/2 -ml-3"
             width={404}
@@ -71,7 +71,7 @@ function WaitingList() {
                   y={0}
                   width={4}
                   height={4}
-                  className="text-gray-200"
+                  className="text-primary-light"
                   fill="currentColor"
                 />
               </pattern>
@@ -84,7 +84,7 @@ function WaitingList() {
           </svg>
         </div>
         <div className="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8">
-          <div className="relative rounded-2xl px-6 py-10 bg-indigo-600 overflow-hidden shadow-xl sm:px-12 sm:py-20">
+          <div className="relative rounded-2xl px-6 py-10 bg-primary overflow-hidden shadow-xl sm:px-12 sm:py-20">
             <div
               aria-hidden="true"
               className="absolute inset-0 -mt-72 sm:-mt-32 md:mt-0"
@@ -108,10 +108,11 @@ function WaitingList() {
                     />
                     </svg> */}
               <img
-                className="h-full w-full object-cover"
+                className="h-full w-full object-cover bg-primary"
                 src="/trees-hero.jpg"
                 alt="Trees"
               />
+              <div className="absolute inset-0 bg-black/20" />
             </div>
             <div className="relative">
               <div className="sm:text-center">
@@ -173,7 +174,7 @@ function WaitingList() {
                 <div className="mt-4 sm:mt-0 sm:ml-3">
                   <button
                     type="submit"
-                    className="block w-full rounded-md border border-transparent px-5 py-3 bg-blue text-base font-medium text-white shadow hover:bg-indigo-400 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-indigo-600 sm:px-10"
+                    className="block w-full rounded-md border border-white px-5 py-3 bg-primary text-base font-medium text-white shadow hover:bg-primary-light focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-indigo-600 sm:px-10"
                   >
                     Yes, I want to invest in our planet
                   </button>

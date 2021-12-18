@@ -11,12 +11,25 @@ export async function getStaticProps() {
     database_id: process.env.NOTION_DATABASE_ID,
   });
 
-  return {
-    props: {
-      posts: response.results,
-    },
-    revalidate: 1,
-  };
+  if (process.env.NODE_ENV === 'production') {
+    const posts = response.results.filter(post => post.properties['Status'].select.name === 'Live')
+    return {
+      props: {
+        posts: posts,
+      },
+      revalidate: 1,
+    };
+  } else {
+    const posts = response.results
+    return {
+      props: {
+        posts: posts,
+      },
+      revalidate: 1,
+    };
+  }
+
+
 }
 
 export default function Blog({ posts }) {
@@ -57,7 +70,7 @@ export default function Blog({ posts }) {
                   </div>
                   <div className="flex-1 bg-white p-6 flex flex-col justify-between">
                     <div className="flex-1">
-                      <p className="text-sm font-medium text-indigo-600">
+                      <p className="text-sm font-medium text-primary">
                         {post.properties["Tags"].select.name}
                       </p>
                       <div className="block mt-2">

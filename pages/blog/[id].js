@@ -69,7 +69,7 @@ export default function Article({ content, page }) {
         jsx.push(<h3>{block.heading_3.text[0]?.plain_text}</h3>);
       }
       if (block.type === "quote") {
-        jsx.push(<blockquote>{block.quote.text[0]?.plain_text}</blockquote>);
+        jsx.push(<blockquote >{block.quote.text[0]?.plain_text}</blockquote>);
       }
       if (block.type === "bulleted_list_item") {
         jsx.push(
@@ -116,7 +116,7 @@ export default function Article({ content, page }) {
                     y={0}
                     width={4}
                     height={4}
-                    className="text-gray-200"
+                    className="text-primary-light"
                     fill="currentColor"
                   />
                 </pattern>
@@ -180,7 +180,7 @@ export default function Article({ content, page }) {
                     y={0}
                     width={4}
                     height={4}
-                    className="text-gray-200"
+                    className="text-primary-light"
                     fill="currentColor"
                   />
                 </pattern>
@@ -221,7 +221,7 @@ export default function Article({ content, page }) {
               </figure>
               <p>
                 Would like to contribute to our blog? Get in touch at{" "}
-                <a href="mailto:benjamin@biomeinvest.com">
+                <a className="text-primary" href="mailto:benjamin@biomeinvest.com">
                   benjamin@biomeinvest.com
                 </a>
               </p>
