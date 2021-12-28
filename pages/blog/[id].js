@@ -219,7 +219,7 @@ export default function Article({ content, page }) {
                   className="w-full rounded-lg"
                   src={
                     page.properties["Bottom Image"].files.length > 0
-                      ? page.properties["Bottom Image"].files.length[0].file.url
+                      ? page.properties["Bottom Image"].files.length[0]?.file.url
                       : ""
                   }
                   alt=""
