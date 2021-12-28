@@ -41,8 +41,12 @@ export default function Faqs(faqsArray) {
   return (
     <div className="main-container">
       <Head>
-        <title>Biome - Invest in our Planet</title>
+        <title>Frequently Asked Questions</title>
         <link rel="icon" href="/favicon.png" />
+        <meta
+          name="description"
+          content="Frequently asked questions by our community of customers."
+        />
       </Head>
       <Header />
       <div className="bg-gray-50">

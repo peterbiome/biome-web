@@ -8,8 +8,9 @@ export default function PrivacyPolicy() {
   return (
     <div className="main-container">
       <Head>
-        <title>Biome - Invest in our Planet</title>
+        <title>Biome Privacy Policy</title>
         <link rel="icon" href="/favicon.png" />
+        <meta name="description" content="Privacy policy for Biome Invest Limited"/>
       </Head>
       <Header />
       <div className="relative py-16 bg-white overflow-hidden">
@@ -39,6 +40,7 @@ export default function PrivacyPolicy() {
                     y={0}
                     width={4}
                     height={4}
+                    rx={4}
                     className="text-primary-light"
                     fill="currentColor"
                   />
@@ -71,7 +73,8 @@ export default function PrivacyPolicy() {
                     y={0}
                     width={4}
                     height={4}
-                    className="text-gray-200"
+                    rx={4}
+                    className="text-primary-light"
                     fill="currentColor"
                   />
                 </pattern>
@@ -103,6 +106,7 @@ export default function PrivacyPolicy() {
                     y={0}
                     width={4}
                     height={4}
+                    rx={4}
                     className="text-primary-light"
                     fill="currentColor"
                   />

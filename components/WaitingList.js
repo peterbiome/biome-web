@@ -71,6 +71,7 @@ function WaitingList() {
                   y={0}
                   width={4}
                   height={4}
+                  rx={4}
                   className="text-primary-light"
                   fill="currentColor"
                 />
@@ -122,7 +123,7 @@ function WaitingList() {
                 <div className="m-10 col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
                   <img
                     src="/OneTreePlanted_Key Logo_Long_White.png"
-                    alt=""
+                    alt="One Tree Planted Logo"
                     width="200"
                   />
                 </div>

@@ -1,7 +1,5 @@
-import { Disclosure } from "@headlessui/react";
-import { ChevronDownIcon, ShareIcon } from "@heroicons/react/outline";
+import { ShareIcon } from "@heroicons/react/outline";
 import Footer from "../components/Footer";
-import WaitingList from "../components/WaitingList";
 import Header from "../components/Header";
 import Head from "next/head";
 
@@ -9,8 +7,9 @@ export default function Thanks() {
   return (
     <div className="main-container">
       <Head>
-        <title>Biome - Invest in our Planet</title>
+        <title>Thanks for signing up!</title>
         <link rel="icon" href="/favicon.png" />
+        <meta name="description" content="Thanks for signing up to Biome, share your sign up with your friends"/>
       </Head>
       <Header />
       <div className="bg-gray-50">
@@ -21,9 +20,9 @@ export default function Thanks() {
             </h2>
             <div className="flex-auto">
               <div className="mb-20 max-w-lg mx-auto">
-                <img
+              <img
                   className="w-full rounded-lg"
-                  src="/pine-tree.png"
+                  src="https://digitalhumani.com/reforestation-organisations/OneTreePlanted/OneTreePlanted-Ethiopia.jpg"
                   alt=""
                 />
               </div>
@@ -43,27 +42,29 @@ export default function Thanks() {
                   FCA approval. As soon as we are ready, well reach out to our
                   waiting list.
                 </p>
-                <button
-                  type="button"
-                  className="mt-5 inline-flex items-center px-6 py-3 border border-transparent shadow-sm text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                {/* <a
+                  href="whatsapp://send?text=GFG Example for whatsapp sharing"
+                  data-action="share/whatsapp/share"
+                  target="_blank"
                 >
-                  Share
-                  <ShareIcon
-                    className="ml-3 -mr-1 h-5 w-5"
-                    aria-hidden="true"
-                  />
-                </button>
-                <img
-                  className="w-full rounded-lg"
-                  src="https://digitalhumani.com/reforestation-organisations/OneTreePlanted/OneTreePlanted-Ethiopia.jpg"
-                  alt=""
-                />
+                  <button
+                    type="button"
+                    className="mt-5 inline-flex items-center px-6 py-3 border border-transparent shadow-sm text-base font-medium rounded-md text-white bg-primary hover:bg-primary-light focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary"
+                  >
+                    Share
+                    <ShareIcon
+                      className="ml-3 -mr-1 h-5 w-5"
+                      aria-hidden="true"
+                    />
+                  </button>
+                </a> */}
+
               </div>
             </div>
             <div className="mt-10 text-center prose prose-indigo prose-lg text-gray-500 mx-auto">
               <p>
                 See the awesome stuff One Tree Planted are doing{" "}
-                <a href="/">here</a> 👈
+                <a href="/blog/52fc294c-ca45-4af9-b552-cd982ff1fa69">here</a> 👈
               </p>
             </div>
           </div>

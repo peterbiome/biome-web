@@ -69,7 +69,7 @@ export default function Article({ content, page }) {
         jsx.push(<h3>{block.heading_3.text[0]?.plain_text}</h3>);
       }
       if (block.type === "quote") {
-        jsx.push(<blockquote >{block.quote.text[0]?.plain_text}</blockquote>);
+        jsx.push(<blockquote>{block.quote.text[0]?.plain_text}</blockquote>);
       }
       if (block.type === "bulleted_list_item") {
         jsx.push(
@@ -85,8 +85,12 @@ export default function Article({ content, page }) {
   return (
     <div className="main-container">
       <Head>
-        <title>Biome - Invest in our Planet</title>
+        <title>{page.properties["Title"].title[0].plain_text}</title>
         <link rel="icon" href="/favicon.png" />
+        <meta
+          name="description"
+          content={page.properties["Description"].rich_text[0].text.content}
+        />
       </Head>
       <Header />
       <div className="relative py-16 bg-white overflow-hidden">
@@ -116,6 +120,7 @@ export default function Article({ content, page }) {
                     y={0}
                     width={4}
                     height={4}
+                    rx={4}
                     className="text-primary-light"
                     fill="currentColor"
                   />
@@ -147,8 +152,9 @@ export default function Article({ content, page }) {
                     x={0}
                     y={0}
                     width={4}
+                    rx={4}
                     height={4}
-                    className="text-gray-200"
+                    className="text-primary-light"
                     fill="currentColor"
                   />
                 </pattern>
@@ -180,6 +186,7 @@ export default function Article({ content, page }) {
                     y={0}
                     width={4}
                     height={4}
+                    rx={4}
                     className="text-primary-light"
                     fill="currentColor"
                   />
@@ -196,7 +203,7 @@ export default function Article({ content, page }) {
         <div className="relative px-4 sm:px-6 lg:px-8">
           <img
             className="h-96 w-full rounded-lg object-cover"
-            src={page.cover.external.url}
+            src={page.cover?.external?.url}
             alt="Trees"
           />
           <div className="text-lg max-w-prose mx-auto">
@@ -213,15 +220,18 @@ export default function Article({ content, page }) {
               <figure>
                 <img
                   className="w-full rounded-lg"
-                  src={page.properties["Bottom Image"].files[0].file.url}
-                  alt=""
+                  src={page.properties["Bottom Image"].files[0]?.file?.url}
+                  alt={page.properties["Title"].title[0].plain_text}
                   width={1310}
                   height={873}
                 />
               </figure>
               <p>
                 Would like to contribute to our blog? Get in touch at{" "}
-                <a className="text-primary" href="mailto:benjamin@biomeinvest.com">
+                <a
+                  className="text-primary"
+                  href="mailto:benjamin@biomeinvest.com"
+                >
                   benjamin@biomeinvest.com
                 </a>
               </p>

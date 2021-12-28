@@ -9,6 +9,12 @@ export async function getStaticProps() {
   const notion = new Client({ auth: process.env.NOTION_API_KEY });
   const response = await notion.databases.query({
     database_id: process.env.NOTION_DATABASE_ID,
+    sorts: [
+      {
+        property: 'Last Updated',
+        direction: 'descending',
+      },
+    ],
   });
 
   if (process.env.NODE_ENV === 'production') {
@@ -36,8 +42,9 @@ export default function Blog({ posts }) {
   return (
     <div className="main-container">
       <Head>
-        <title>Biome - Invest in our Planet</title>
+        <title>Biome Blog - Up to date content on the environmental world and investments.</title>
         <link rel="icon" href="/favicon.png" />
+        <meta name="description" content="Check out our Blog, see the latest environmental initiatives from around the world, top sustainable products and all Biome updates" />
       </Head>
       <Header />
       <div className="relative bg-gray-50 pt-16 pb-20 px-4 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8">
@@ -50,8 +57,7 @@ export default function Blog({ posts }) {
               From the blog
             </h2>
             <p className="mt-3 max-w-2xl mx-auto text-xl text-gray-500 sm:mt-4">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa
-              libero labore natus atque, ducimus sed.
+              Checkout our recent articles, updated weekly.
             </p>
           </div>
           <div className="mt-12 max-w-lg mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none">
@@ -65,7 +71,7 @@ export default function Blog({ posts }) {
                         post.properties["Cover Image"].files[0] &&
                         post.properties["Cover Image"].files[0].file.url
                       }
-                      alt=""
+                      alt={post.properties["Title"].title[0].text.content}
                     />
                   </div>
                   <div className="flex-1 bg-white p-6 flex flex-col justify-between">
@@ -92,7 +98,7 @@ export default function Blog({ posts }) {
                         </span>
                         <img
                           className="h-10 w-10 rounded-full"
-                          alt=""
+                          alt={post.properties["Edited by"].last_edited_by.name}
                           src="https://s3-us-west-2.amazonaws.com/public.notion-static.com/f92f608a-ab8f-4bd5-9d7d-27c4e2f0064b/1628589731063.jpeg"
                         />
                       </div>
