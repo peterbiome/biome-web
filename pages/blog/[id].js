@@ -203,14 +203,11 @@ export default function Article({ content, page }) {
         <div className="relative px-4 sm:px-6 lg:px-8">
           <img
             className="h-96 w-full rounded-lg object-cover"
-            src={page.cover?.external?.url}
+            src={page.cover?.external?.url || ""}
             alt="Trees"
           />
           <div className="text-lg max-w-prose mx-auto">
             <h1>
-              {/* <span className="block text-base text-center text-indigo-600 font-semibold tracking-wide uppercase">
-                            Introducing
-                        </span> */}
               <span className="mt-20 mb-10 block text-3xl text-center leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
                 {page.properties["Title"].title[0].plain_text}
               </span>
@@ -220,8 +217,12 @@ export default function Article({ content, page }) {
               <figure>
                 <img
                   className="w-full rounded-lg"
-                  src={page.properties["Bottom Image"].files[0]?.file?.url}
-                  alt={page.properties["Title"].title[0].plain_text}
+                  src={
+                    page.properties["Bottom Image"].files.length > 0
+                      ? page.properties["Bottom Image"].files.length[0].file.url
+                      : ""
+                  }
+                  alt=""
                   width={1310}
                   height={873}
                 />
