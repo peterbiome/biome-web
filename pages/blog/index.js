@@ -42,7 +42,7 @@ export default function Blog({ posts }) {
   return (
     <div className="main-container">
       <Head>
-        <title>Biome Blog - Up to date content on the environmental world and investments.</title>
+        <title>Biome Blog - Environmental world and investments.</title>
         <link rel="icon" href="/favicon.png" />
         <meta name="description" content="Check out our Blog, see the latest environmental initiatives from around the world, top sustainable products and all Biome updates" />
       </Head>

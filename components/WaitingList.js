@@ -145,6 +145,7 @@ function WaitingList() {
                     type="text"
                     className="block w-full border border-transparent rounded-md px-5 py-3 text-base text-gray-900 placeholder-gray-500 shadow-sm focus:outline-none focus:border-transparent focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-indigo-600"
                     placeholder="First Name"
+                    required
                     onChange={(e) => setFirstName(e.target.value)}
                   />
                 </div>
@@ -157,6 +158,7 @@ function WaitingList() {
                     type="text"
                     className="block w-full border border-transparent rounded-md px-5 py-3 text-base text-gray-900 placeholder-gray-500 shadow-sm focus:outline-none focus:border-transparent focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-indigo-600"
                     placeholder="Last Name"
+                    required
                     onChange={(e) => setLastName(e.target.value)}
                   />
                 </div>
@@ -169,6 +171,7 @@ function WaitingList() {
                     type="email"
                     className="block w-full border border-transparent rounded-md px-5 py-3 text-base text-gray-900 placeholder-gray-500 shadow-sm focus:outline-none focus:border-transparent focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-indigo-600"
                     placeholder="Email"
+                    required
                     onChange={(e) => setEmail(e.target.value)}
                   />
                 </div>

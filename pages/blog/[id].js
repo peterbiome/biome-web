@@ -3,6 +3,7 @@ import WaitingList from "../../components/WaitingList";
 import Header from "../../components/Header";
 import { Client } from "@notionhq/client";
 import Head from "next/head";
+import { Render } from "@9gustin/react-notion-render";
 
 export const getStaticPaths = async () => {
   const notion = new Client({ auth: process.env.NOTION_API_KEY });
@@ -53,34 +54,44 @@ export async function getStaticProps(context) {
 }
 
 export default function Article({ content, page }) {
-  const getPageDisplay = () => {
-    let jsx = [];
-    content.forEach((block) => {
-      if (block.type === "paragraph") {
-        jsx.push(<p>{block.paragraph.text[0]?.plain_text}</p>);
-      }
-      if (block.type === "heading_1") {
-        jsx.push(<h1>{block.heading_1.text[0]?.plain_text}</h1>);
-      }
-      if (block.type === "heading_2") {
-        jsx.push(<h2>{block.heading_2.text[0]?.plain_text}</h2>);
-      }
-      if (block.type === "heading_3") {
-        jsx.push(<h3>{block.heading_3.text[0]?.plain_text}</h3>);
-      }
-      if (block.type === "quote") {
-        jsx.push(<blockquote>{block.quote.text[0]?.plain_text}</blockquote>);
-      }
-      if (block.type === "bulleted_list_item") {
-        jsx.push(
-          <ul role="list">
-            <li>{block.bulleted_list_item.text[0]?.plain_text}</li>
-          </ul>
-        );
-      }
-    });
-    return jsx;
-  };
+  // const getPageDisplay = () => {
+  //   let jsx = [];
+  //   content.forEach((block) => {
+  //     if (block.type === "paragraph") {
+  //       let str = "";
+
+  //       block.paragraph.text.forEach((text) => {
+  //         if (text.href) {
+  //           jsx.push(<a href={text.href}>{text.plain_text}</a>);
+  //         } else if (text.annotations.bold) {
+  //           jsx.push(<strong>{text.plain_text}</strong>);
+  //         } else {
+  //           jsx.push(<p>{text.plain_text}</p>);
+  //         }
+  //       });
+  //     }
+  //     if (block.type === "heading_1") {
+  //       jsx.push(<h1>{block.heading_1.text[0]?.plain_text}</h1>);
+  //     }
+  //     if (block.type === "heading_2") {
+  //       jsx.push(<h2>{block.heading_2.text[0]?.plain_text}</h2>);
+  //     }
+  //     if (block.type === "heading_3") {
+  //       jsx.push(<h3>{block.heading_3.text[0]?.plain_text}</h3>);
+  //     }
+  //     if (block.type === "quote") {
+  //       jsx.push(<blockquote>{block.quote.text[0]?.plain_text}</blockquote>);
+  //     }
+  //     if (block.type === "bulleted_list_item") {
+  //       jsx.push(
+  //         <ul role="list">
+  //           <li>{block.bulleted_list_item.text[0]?.plain_text}</li>
+  //         </ul>
+  //       );
+  //     }
+  //   });
+  //   return jsx;
+  // };
 
   return (
     <div className="main-container">
@@ -92,7 +103,7 @@ export default function Article({ content, page }) {
           content={page.properties["Description"].rich_text[0].text.content}
         />
       </Head>
-      <Header />
+      <Header /> 
       <div className="relative py-16 bg-white overflow-hidden">
         <div className="hidden lg:block lg:absolute lg:inset-y-0 lg:h-full lg:w-full">
           <div
@@ -213,20 +224,24 @@ export default function Article({ content, page }) {
               </span>
             </h1>
             <div className="mt-6 prose prose-indigo prose-lg text-gray-500 mx-auto">
-              {getPageDisplay()}
-              <figure>
+              <Render blocks={content} />
+
+              {/* {getPageDisplay()} */}
+              {/* <figure>
                 <img
                   className="w-full rounded-lg"
                   src={
                     page.properties["Bottom Image"].files.length > 0
-                      ? page.properties["Bottom Image"].files.length[0]?.file.url
+                      ? page.properties["Bottom Image"].files.length[0]?.file
+                          .url
                       : ""
                   }
                   alt=""
                   width={1310}
                   height={873}
                 />
-              </figure>
+              </figure> */}
+              <hr></hr>
               <p>
                 Would like to contribute to our blog? Get in touch at{" "}
                 <a
