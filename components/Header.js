@@ -26,7 +26,7 @@ const solutions = [
   {
     name: "Impact of green pensions",
     description:
-      "How much impact does this really have? See our in depth analysis",
+      "Why are pensions the best way to make an impact?",
     href: "/blog/b3b0fd72-33dc-48be-98ff-19cca6eaf789",
     icon: GlobeIcon,
   },
