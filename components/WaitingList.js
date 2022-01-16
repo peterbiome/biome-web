@@ -178,7 +178,7 @@ function WaitingList() {
                 <div className="mt-4 sm:mt-0 sm:ml-3">
                   <button
                     type="submit"
-                    className="block w-full rounded-md border border-white px-5 py-3 bg-primary text-base font-medium text-white shadow hover:bg-primary-light focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-indigo-600 sm:px-10"
+                    className="block w-full rounded-md  py-3 bg-primary text-base font-medium text-white shadow hover:bg-tertiary sm:px-10"
                   >
                     Yes, I want to invest in our planet
                   </button>

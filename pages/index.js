@@ -102,7 +102,7 @@ export default function Home() {
                   <div className="relative px-4 py-16 sm:px-6 sm:py-24 lg:py-32 lg:px-8">
                     <h1 className="text-center text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
                       <span className="block text-white">Invest in our</span>
-                      <span className="block text-primary-verylight">
+                      <span className="block primary-light ">
                         Planet
                       </span>
                     </h1>
@@ -115,7 +115,7 @@ export default function Home() {
                       <div className="space-y-4 sm:space-y-0 sm:mx-auto sm:inline-grid sm:grid-cols-1 sm:gap-5">
                         <a
                           href="#sign-up"
-                          className="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-primary hover:text-white bg-white hover:bg-primary-light sm:px-8"
+                          className="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white hover:text-white bg-primary hover:bg-tertiary sm:px-8"
                         >
                           Join the waiting list
                         </a>
@@ -185,7 +185,7 @@ export default function Home() {
       <div className="bg-gray-50 pt-12 sm:pt-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+            <h2 className="text-3xl font-extrabold text-secondary sm:text-4xl">
               Impact Calculator
             </h2>
             <p className="mt-3 text-xl text-gray-500 sm:mt-4">
@@ -226,7 +226,7 @@ export default function Home() {
                     <dt className="order-2 mt-2 text-lg leading-6 font-medium text-gray-500">
                       Litres of drinking water saved
                     </dt>
-                    <dd className="order-1 text-5xl font-extrabold text-primary">
+                    <dd className="order-1 text-5xl font-extrabold text-tertiary">
                       {numberWithCommas(drinkingWater)}
                     </dd>
                   </div>
@@ -234,7 +234,7 @@ export default function Home() {
                     <dt className="order-2 mt-2 text-lg leading-6 font-medium text-gray-500">
                       Metrics tons of CO2 avoided
                     </dt>
-                    <dd className="order-1 text-5xl font-extrabold text-primary">
+                    <dd className="order-1 text-5xl font-extrabold text-tertiary">
                       {numberWithCommas(co2)}
                     </dd>
                   </div>
@@ -242,7 +242,7 @@ export default function Home() {
                     <dt className="order-2 mt-2 text-lg leading-6 font-medium text-gray-500">
                       Trees planted
                     </dt>
-                    <dd className="order-1 text-5xl font-extrabold text-primary">
+                    <dd className="order-1 text-5xl font-extrabold text-tertiary">
                       {numberWithCommas(trees)}
                     </dd>
                   </div>
@@ -276,7 +276,7 @@ export default function Home() {
                   <div className="mt-6">
                     <a
                       href="#"
-                      className="inline-flex px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-primary hover:bg-primary-light"
+                      className="inline-flex px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-primary hover:bg-tertiary"
                     >
                       See more
                     </a>
@@ -341,7 +341,7 @@ export default function Home() {
                   <div className="mt-6">
                     <a
                       href="'/blog/b1cea878-3cb5-41b4-849d-76f8be8f462f?t=Our%20green%20plans'"
-                      className="inline-flex px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-primary hover:bg-primary-light"
+                      className="inline-flex px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-primary hover:bg-tertiary"
                     >
                       See more
                     </a>
@@ -629,8 +629,8 @@ export default function Home() {
                   src="/wind-farm.jpg"
                   alt="Wind farm - renewable energy"
                 />
-                <div className="absolute inset-0 bg-primary-light mix-blend-multiply" />
-                <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary opacity-90" />
+                <div className="absolute inset-0 bg-secondary mix-blend-multiply" />
+                <div className="absolute inset-0 bg-gradient-to-t bg-secondary bg-secondary opacity-40" />
                 <div className="relative px-8">
                   <div>
                     {/* <img
@@ -642,7 +642,7 @@ export default function Home() {
                   <blockquote className="mt-8">
                     <div className="relative text-lg font-medium text-white md:flex-grow">
                       <svg
-                        className="absolute top-0 left-0 transform -translate-x-3 -translate-y-2 h-8 w-8 text-secondary"
+                        className="absolute top-0 left-0 transform -translate-x-3 -translate-y-2 h-8 w-8 text-tertiary-light"
                         fill="currentColor"
                         viewBox="0 0 32 32"
                         aria-hidden="true"
@@ -657,7 +657,7 @@ export default function Home() {
                     </div>
 
                     <footer className="mt-4">
-                      <p className="hover:underline text-base font-semibold text-primary-verylight">
+                      <p className="hover:underline text-base font-semibold text-white">
                         Research by{" "}
                         <a href="https://www.makemymoneymatter.co.uk">
                           Make My Money Matter

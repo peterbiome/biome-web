@@ -59,7 +59,7 @@ function Footer() {
               key={item.name}
               href={item.href}
               target="_blank"
-              className="text-primary hover:text-primary-light"
+              className="text-primary hover:text-tertiary"
             >
               <span className="sr-only">{item.name}</span>
               <item.icon className="h-6 w-6" aria-hidden="true" />

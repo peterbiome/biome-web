@@ -45,10 +45,9 @@ function Header() {
         <div className="flex justify-between items-center max-w-7xl mx-auto px-4 py-6 sm:px-6 md:justify-start md:space-x-10 lg:px-8">
           <div className="flex justify-start lg:w-0 lg:flex-1">
             <a href="/">
-              <span className="sr-only">Workflow</span>
               <img
                 className="h-8 w-auto sm:h-10"
-                src="/biome_horizontal-c1.png"
+                src="/biome-horizontal-logo.png"
                 alt="Biome Logo"
               />
             </a>
@@ -97,7 +96,7 @@ function Header() {
                               href={item.href}
                               className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
                             >
-                              <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-primary text-white sm:h-12 sm:w-12">
+                              <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-primary hover:bg-tertiary text-white sm:h-12 sm:w-12">
                                 <item.icon
                                   className="h-6 w-6"
                                   aria-hidden="true"
@@ -137,7 +136,7 @@ function Header() {
                     </a> */}
             <a
               href="#sign-up"
-              className="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-primary hover:bg-primary-light"
+              className="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-primary hover:bg-tertiary"
             >
               Sign up
             </a>
@@ -163,7 +162,7 @@ function Header() {
                   <div>
                     <img
                       className="h-8 w-auto"
-                      src="biome_icon-c1.png"
+                      src="/biome-horizontal-logo.png"
                       alt="Biome Logo"
                     />
                   </div>
@@ -182,7 +181,7 @@ function Header() {
                         href={item.href}
                         className="-m-3 p-3 flex items-center rounded-lg hover:bg-gray-50"
                       >
-                        <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-primary text-white">
+                        <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-primary hover:bg-tertiary text-white">
                           <item.icon className="h-6 w-6" aria-hidden="true" />
                         </div>
                         <div className="ml-4 text-base font-medium text-gray-900">
@@ -208,7 +207,7 @@ function Header() {
                 <div className="mt-6">
                   <a
                     href="#sign-up"
-                    className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-primary hover:bg-primary-light"
+                    className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-primary hover:bg-tertiary"
                   >
                     Join waiting list
                   </a>
