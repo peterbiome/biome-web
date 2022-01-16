@@ -77,7 +77,7 @@ export default function Blog({ posts }) {
                   <div className="flex-1 bg-white p-6 flex flex-col justify-between">
                     <div className="flex-1">
                       <p className="text-sm font-medium text-primary">
-                        {post.properties["Tags"].select.name}
+                        {post.properties["Tags"].select?.name}
                       </p>
                       <div className="block mt-2">
                         <p className="text-xl font-semibold text-gray-900">
@@ -85,7 +85,7 @@ export default function Blog({ posts }) {
                         </p>
                         <p className="mt-3 text-base text-gray-500">
                           {
-                            post.properties["Description"].rich_text[0].text
+                            post.properties["Description"].rich_text[0]?.text
                               .content
                           }
                         </p>
@@ -99,7 +99,7 @@ export default function Blog({ posts }) {
                         <img
                           className="h-10 w-10 rounded-full"
                           alt={post.properties["Edited by"].last_edited_by.name}
-                          src="https://s3-us-west-2.amazonaws.com/public.notion-static.com/f92f608a-ab8f-4bd5-9d7d-27c4e2f0064b/1628589731063.jpeg"
+                          src={post.properties["Edited by"].last_edited_by.avatar_url}
                         />
                       </div>
                       <div className="ml-3">
