@@ -94,18 +94,18 @@ export default function Blog({ posts }) {
                     <div className="mt-6 flex items-center">
                       <div className="flex-shrink-0">
                         <span className="sr-only">
-                          {post.properties["Edited by"].last_edited_by.name}
+                          {post.properties["Editor"].people[0]?.name}
                         </span>
                         <img
                           className="h-10 w-10 rounded-full"
-                          alt={post.properties["Edited by"].last_edited_by.name}
-                          src={post.properties["Edited by"].last_edited_by.avatar_url}
+                          alt={post.properties["Editor"].people[0]?.name}
+                          src={post.properties["Editor"].people[0]?.avatar_url}
                         />
                       </div>
                       <div className="ml-3">
                         <p className="text-sm font-medium text-gray-900">
                           <a className="hover:underline">
-                            {post.properties["Edited by"].last_edited_by.name}
+                            {post.properties["Editor"].people[0]?.name}
                           </a>
                         </p>
                         <div className="flex space-x-1 text-sm text-gray-500">

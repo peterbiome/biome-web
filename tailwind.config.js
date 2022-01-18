@@ -18,8 +18,8 @@ module.exports = {
         },
         secondary: {
           DEFAULT: "#457C6F",
-          // dark: "172136",
-          // light: "#708AC2",
+          medium: "#509886",
+          light: "#60A48C",
         },
         tertiary: {
           DEFAULT: "#0F6484",

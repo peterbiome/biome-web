@@ -97,12 +97,13 @@ export default function Home() {
                       src="/trees-hero.jpg"
                       alt="Trees"
                     />
-                    <div className="absolute inset-0 bg-black/20" />
+                    {/* <div className="absolute inset-0 bg-secondary-light/30 mix-blend-multiply"/> */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black bg-secondary-light opacity-50" />
                   </div>
                   <div className="relative px-4 py-16 sm:px-6 sm:py-24 lg:py-32 lg:px-8">
                     <h1 className="text-center text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
-                      <span className="block text-white">Invest in our</span>
-                      <span className="block primary-light ">
+                      <span className="block text-grey">Invest in our</span>
+                      <span className="block text-grey ">
                         Planet
                       </span>
                     </h1>
@@ -138,42 +139,44 @@ export default function Home() {
                 <p className="text-center text-sm font-semibold uppercase text-gray-500 tracking-wide">
                   Partnered with
                 </p>
-                <div className="mt-6 grid grid-cols-2 gap-8 md:grid-cols-6 lg:grid-cols-5">
-                  <div className="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
+                <div className="mt-8 grid grid-cols-2 gap-8 md:grid-cols-5 lg:grid-cols-4">
+                  <div className="mt-2 col-span-2 flex justify-center md:col-span-3 lg:col-span-1">
                     <img
                       className="h-12"
                       src="/OneTreePlanted_Key Logo_Long_Black.png"
                       alt="One Tree Planted logo"
                     />
                   </div>
-                  <div className="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
+
+                  <div className="col-span-1 flex justify-center md:col-span-3 lg:col-span-1">
                     <img
                       className="h-20"
                       src="/Wealthkernel.png"
                       alt="Wealth Kernel logo"
                     />
                   </div>
-                  <div className="col-span-2 flex justify-center md:col-span-2 md:col-start-4 lg:col-span-1">
-                    <img
-                      className="h-12"
-                      src="/purepng.com-blackrock-logologobrand-logoiconslogos-251519938910ako99.png"
-                      alt="Blackrock logo"
-                    />
-                  </div>
-                  <div className="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
+
+                  <div className="mt-4 col-span-1 flex justify-center md:col-span-3 lg:col-span-1">
                     <img
                       className="h-12"
                       src="/lloyds_bank_logo.png"
                       alt="Lloyds Bank logo"
                     />
                   </div>
-                  <div className="col-span-1 flex justify-center md:col-span-2 md:col-start-2 lg:col-span-1">
+                  <div className="mt-4 col-span-2 flex justify-center md:col-span-3 md:col-start-4 lg:col-span-1">
                     <img
                       className="h-12"
-                      src="/1024px-Baillie_Gifford_logo.svg.png"
-                      alt="Baillie Gifford logo"
+                      src="/winterflood-securities-logo.png"
+                      alt="Winterflood logo"
                     />
                   </div>
+                  {/* <div className="col-span-1 flex justify-center md:col-span-2 md:col-start-2 lg:col-span-1">
+                    <img
+                      className="h-12"
+                      src="/natwestlogo.png"
+                      alt="Natwest logo"
+                    />
+                  </div> */}
                 </div>
               </div>
             </div>
@@ -182,7 +185,7 @@ export default function Home() {
           {/* More main page content here... */}
         </main>
       </div>
-      <div className="bg-gray-50 pt-12 sm:pt-16">
+      {/* <div className="bg-gray-50 pt-12 sm:pt-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl font-extrabold text-secondary sm:text-4xl">
@@ -251,7 +254,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
       <div className="relative bg-white pt-16 pb-32 overflow-hidden">
         <div className="relative">
           <div className="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:grid-flow-col-dense lg:gap-24">
@@ -309,7 +312,7 @@ export default function Home() {
             <div className="mt-12 sm:mt-16 lg:mt-0">
               <div className="pl-4 -mr-48 sm:pl-6 md:-mr-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
                 <img
-                  className="w-full lg:absolute lg:left-0 lg:h-full lg:w-auto lg:max-w-none"
+                  className="w-5/6"
                   src="homepage_transfer.png"
                   alt="Transfering a your old pensions"
                 />
@@ -317,7 +320,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="mt-24">
+        <div className="mt-12">
           <div className="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:grid-flow-col-dense lg:gap-24">
             <div className="px-4 max-w-xl mx-auto sm:px-6 lg:py-32 lg:max-w-none lg:mx-0 lg:px-0 lg:col-start-2">
               <div>
@@ -350,7 +353,7 @@ export default function Home() {
               </div>
             </div>
             <div className="mt-12 sm:mt-16 lg:mt-0 lg:col-start-1">
-              <div className="pr-4 -ml-48 sm:pr-6 md:-ml-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
+              <div className="pr-4 -ml-48 sm:pr-6 md:-ml-16 lg:px-0 lg:m-0 lg:relative lg:h-5/6">
                 <img
                   className="w-full lg:absolute lg:right-0 lg:h-full lg:w-auto lg:max-w-none"
                   src="homepage_plans.png"
@@ -361,7 +364,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="relative bg-white pt-16 pb-32 overflow-hidden">
+      <div className="relative bg-white pb-32 overflow-hidden">
         <div className="relative">
           <div className="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:grid-flow-col-dense lg:gap-24">
             <div className="px-4 max-w-xl mx-auto sm:px-6 lg:py-16 lg:max-w-none lg:mx-0 lg:px-0">
@@ -376,13 +379,11 @@ export default function Home() {
                 </div>
                 <div className="mt-6">
                   <h2 className="text-3xl font-extrabold tracking-tight text-gray-900">
-                    Full Transparency
+                    Gain Full Transparency
                   </h2>
                   <p className="mt-4 text-lg text-gray-500">
                     Have full transparency into what companies are in your
-                    portfolio and what positive impact they are having. Biome
-                    produces an Impact articles on all of our top invested
-                    companies.
+                    portfolio and what positive impact they are having.
                   </p>
                   {/* <div className="mt-6">
                   <a
@@ -418,17 +419,17 @@ export default function Home() {
             </div> */}
             </div>
             <div className="mt-12 sm:mt-16 lg:mt-0">
-              <div className="pl-4 -mr-48 sm:pl-6 md:-mr-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
+              <div className="">
                 <img
-                  className="w-full lg:absolute lg:left-0 lg:h-full lg:w-auto lg:max-w-none"
-                  src="homepage_timeline.png"
+                  className=""
+                  src="homepage_notify.png"
                   alt="Track your pension progress"
                 />
               </div>
             </div>
           </div>
         </div>
-        <div className="mt-24">
+        <div className="mt-8">
           <div className="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:grid-flow-col-dense lg:gap-24">
             <div className="px-4 max-w-xl mx-auto sm:px-6 lg:py-32 lg:max-w-none lg:mx-0 lg:px-0 lg:col-start-2">
               <div>
@@ -460,10 +461,10 @@ export default function Home() {
               </div>
             </div>
             <div className="mt-12 sm:mt-16 lg:mt-0 lg:col-start-1">
-              <div className="pr-4 -ml-48 sm:pr-6 md:-ml-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
+              <div className="">
                 <img
-                  className="w-full lg:absolute lg:right-0 lg:h-full lg:w-auto lg:max-w-none"
-                  src="homepage_notify.png"
+                  className="w-5/6"
+                  src="homepage_timeline.png"
                   alt="Customer profile user interface"
                 />
               </div>
@@ -471,7 +472,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="bg-gray-100">
+      {/* <div className="bg-gray-100">
         <div className="pt-12 sm:pt-16 lg:pt-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
@@ -568,18 +569,13 @@ export default function Home() {
                       </a>
                     </div>
                   </div>
-                  {/* <div className="mt-4 text-sm">
-                  <a href="#" className="font-medium text-gray-900">
-                    Get a free sample <span className="font-normal text-gray-500">(20MB)</span>
-                  </a>
-                </div> */}
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <div className="relative bg-white py-16 sm:py-24">
+      </div> */}
+      <div className="relative bg-white py-16 sm:py- mt-0">
         <div className="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:gap-24 lg:items-start">
           <div className="relative sm:py-16 lg:py-0">
             <div
@@ -609,7 +605,7 @@ export default function Home() {
                       width={4}
                       height={4}
                       rx={4}
-                      className="text-primary-light"
+                      className="text-tertiary-light"
                       fill="currentColor"
                     />
                   </pattern>
@@ -629,8 +625,8 @@ export default function Home() {
                   src="/wind-farm.jpg"
                   alt="Wind farm - renewable energy"
                 />
-                <div className="absolute inset-0 bg-secondary mix-blend-multiply" />
-                <div className="absolute inset-0 bg-gradient-to-t bg-secondary bg-secondary opacity-40" />
+                {/* <div className="absolute inset-0 bg-secondary-medium mix-blend-multiply" /> */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black bg-secondary-light opacity-30" />
                 <div className="relative px-8">
                   <div>
                     {/* <img
@@ -642,7 +638,7 @@ export default function Home() {
                   <blockquote className="mt-8">
                     <div className="relative text-lg font-medium text-white md:flex-grow">
                       <svg
-                        className="absolute top-0 left-0 transform -translate-x-3 -translate-y-2 h-8 w-8 text-tertiary-light"
+                        className="absolute top-0 left-0 transform -translate-x-3 -translate-y-2 h-8 w-8 text-primary"
                         fill="currentColor"
                         viewBox="0 0 32 32"
                         aria-hidden="true"
@@ -670,10 +666,9 @@ export default function Home() {
             </div>
           </div>
           <div className="relative mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-0">
-            {/* Content area */}
             <div className="pt-12 sm:pt-16 lg:pt-20">
-              <h2 className="text-3xl text-gray-900 font-extrabold tracking-tight sm:text-4xl">
-                What are green pensions?
+              <h2 className="text-3xl text-gray-900 font-extrabold tracking-tight sm:text-4xl text-secondary">
+                <span className="text-secondary">What are green pensions?</span>
               </h2>
               <div className="mt-6 text-gray-500 space-y-6">
                 <p className="text-lg">
@@ -700,24 +695,6 @@ export default function Home() {
                 </p>
               </div>
             </div>
-
-            {/* Stats section */}
-            {/* <div className="mt-10">
-            <dl className="grid grid-cols-2 gap-x-4 gap-y-8">
-              {stats.map((stat) => (
-                <div key={stat.label} className="border-t-2 border-gray-100 pt-6">
-                  <dt className="text-base font-medium text-gray-500">{stat.label}</dt>
-                  <dd className="text-3xl font-extrabold tracking-tight text-gray-900">{stat.value}</dd>
-                </div>
-              ))}
-            </dl>
-            <div className="mt-10">
-              <a href="#" className="text-base font-medium text-indigo-600">
-                {' '}
-                Learn more about how we're changing the world <span aria-hidden="true">&rarr;</span>{' '}
-              </a>
-            </div>
-          </div> */}
           </div>
         </div>
       </div>

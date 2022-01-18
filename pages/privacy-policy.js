@@ -41,7 +41,7 @@ export default function PrivacyPolicy() {
                     width={4}
                     height={4}
                     rx={4}
-                    className="text-primary-light"
+                    className="text-tertiary-light"
                     fill="currentColor"
                   />
                 </pattern>
@@ -74,7 +74,7 @@ export default function PrivacyPolicy() {
                     width={4}
                     height={4}
                     rx={4}
-                    className="text-primary-light"
+                    className="text-tertiary-light"
                     fill="currentColor"
                   />
                 </pattern>
@@ -107,7 +107,7 @@ export default function PrivacyPolicy() {
                     width={4}
                     height={4}
                     rx={4}
-                    className="text-primary-light"
+                    className="text-tertiary-light"
                     fill="currentColor"
                   />
                 </pattern>

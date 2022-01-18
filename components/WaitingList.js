@@ -72,7 +72,7 @@ function WaitingList() {
                   width={4}
                   height={4}
                   rx={4}
-                  className="text-primary-light"
+                  className="text-tertiary-light"
                   fill="currentColor"
                 />
               </pattern>
@@ -110,10 +110,10 @@ function WaitingList() {
                     </svg> */}
               <img
                 className="h-full w-full object-cover bg-primary"
-                src="/trees-hero.jpg"
+                src="/farm-hero.jpg"
                 alt="Trees"
               />
-              <div className="absolute inset-0 bg-black/20" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black bg-secondary opacity-70" />
             </div>
             <div className="relative">
               <div className="sm:text-center">

@@ -24,16 +24,16 @@ const navigation = [
 
 const solutions = [
   {
-    name: "Impact of green pensions",
+    name: "Why pensions?",
     description:
       "Why are pensions the best way to make an impact?",
     href: "/blog/b3b0fd72-33dc-48be-98ff-19cca6eaf789",
     icon: GlobeIcon,
   },
   {
-    name: "Our green plans",
-    description: "See our plans on offer and their fees",
-    href: "/blog/b1cea878-3cb5-41b4-849d-76f8be8f462f",
+    name: "Greenwashing",
+    description: "What is greenwashing?",
+    href: "/blog/21ce3df1-cc92-4e94-84a2-f15a15c95434",
     icon: CurrencyPoundIcon,
   },
 ];
