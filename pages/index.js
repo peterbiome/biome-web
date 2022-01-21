@@ -255,7 +255,7 @@ export default function Home() {
           </div>
         </div>
       </div> */}
-      <div className="relative bg-white pt-16 pb-32 overflow-hidden">
+      <div className="relative bg-white pt-24 pb-32 overflow-hidden">
         <div className="relative">
           <div className="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:grid-flow-col-dense lg:gap-24">
             <div className="px-4 max-w-xl mx-auto sm:px-6 lg:py-16 lg:max-w-none lg:mx-0 lg:px-0">
@@ -269,7 +269,7 @@ export default function Home() {
                   </span>
                 </div>
                 <div className="mt-6">
-                  <h2 className="text-3xl font-extrabold tracking-tight text-gray-900">
+                  <h2 className="text-3xl font-extrabold tracking-tight text-secondary">
                     Easily consolidate
                   </h2>
                   <p className="mt-4 text-lg text-gray-500">
@@ -333,7 +333,7 @@ export default function Home() {
                   </span>
                 </div>
                 <div className="mt-6">
-                  <h2 className="text-3xl font-extrabold tracking-tight text-gray-900">
+                  <h2 className="text-3xl font-extrabold tracking-tight text-secondary">
                     Choose your green pension strategy
                   </h2>
                   <p className="mt-4 text-lg text-gray-500">
@@ -378,7 +378,7 @@ export default function Home() {
                   </span>
                 </div>
                 <div className="mt-6">
-                  <h2 className="text-3xl font-extrabold tracking-tight text-gray-900">
+                  <h2 className="text-3xl font-extrabold tracking-tight text-secondary">
                     Gain Full Transparency
                   </h2>
                   <p className="mt-4 text-lg text-gray-500">
@@ -429,7 +429,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="mt-8">
+        <div className="mt-0">
           <div className="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:grid-flow-col-dense lg:gap-24">
             <div className="px-4 max-w-xl mx-auto sm:px-6 lg:py-32 lg:max-w-none lg:mx-0 lg:px-0 lg:col-start-2">
               <div>
@@ -442,7 +442,7 @@ export default function Home() {
                   </span>
                 </div>
                 <div className="mt-6">
-                  <h2 className="text-3xl font-extrabold tracking-tight text-gray-900">
+                  <h2 className="text-3xl font-extrabold tracking-tight text-secondary">
                     Stay in control
                   </h2>
                   <p className="mt-4 text-lg text-gray-500">
@@ -461,9 +461,9 @@ export default function Home() {
               </div>
             </div>
             <div className="mt-12 sm:mt-16 lg:mt-0 lg:col-start-1">
-              <div className="">
+              <div className="justify-center">
                 <img
-                  className="w-5/6"
+                  className="mx-0"
                   src="homepage_timeline.png"
                   alt="Customer profile user interface"
                 />
