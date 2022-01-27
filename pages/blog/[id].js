@@ -100,10 +100,10 @@ export default function Article({ content, page }) {
         <link rel="icon" href="/favicon.png" />
         <meta
           name="description"
-          content={page.properties["Description"].rich_text[0].text.content}
+          content={page.properties["Description"].rich_text[0]?.text.content}
         />
       </Head>
-      <Header /> 
+      <Header />
       <div className="relative py-16 bg-white overflow-hidden">
         <div className="hidden lg:block lg:absolute lg:inset-y-0 lg:h-full lg:w-full">
           <div
