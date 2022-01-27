@@ -75,12 +75,6 @@ export default function Home() {
       <Head>
         <title>Biome - Invest in our Planet</title>
         <link rel="icon" href="/favicon.png" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Baloo+2&display=swap"
-          rel="stylesheet"
-        />
         <meta
           name="description"
           content="Easily consolidate your pensions into one simpler and
