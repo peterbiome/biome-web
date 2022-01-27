@@ -1,4 +1,5 @@
 const colors = require("tailwindcss/colors");
+const defaultTheme = require("tailwindcss/defaultTheme");
 
 module.exports = {
   mode: "jit",
@@ -7,7 +8,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        heading: ['Baloo 2'],
+        sans: ['"Baloo 2"', ...defaultTheme.fontFamily.sans],
       },
       colors: {
         primary: {
@@ -37,15 +38,15 @@ module.exports = {
         // },
         alert: {
           DEFAULT: "#DE1C22",
-          light: '#F9D3D4'
+          light: "#F9D3D4",
         },
         grey: {
-          DEFAULT: '#FAF8F9'
+          DEFAULT: "#FAF8F9",
         },
         warning: {
-          DEFAULT: '#E86825',
-          light: '#FFE1BE',
-        }
+          DEFAULT: "#E86825",
+          light: "#FFE1BE",
+        },
       },
     },
   },

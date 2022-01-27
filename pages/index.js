@@ -75,6 +75,12 @@ export default function Home() {
       <Head>
         <title>Biome - Invest in our Planet</title>
         <link rel="icon" href="/favicon.png" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Baloo+2&display=swap"
+          rel="stylesheet"
+        />
         <meta
           name="description"
           content="Easily consolidate your pensions into one simpler and
@@ -102,9 +108,7 @@ export default function Home() {
                   <div className="relative px-4 py-16 sm:px-6 sm:py-24 lg:py-32 lg:px-8">
                     <h1 className="text-center text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
                       <span className="block text-white">Invest in our</span>
-                      <span className="block primary-light ">
-                        Planet
-                      </span>
+                      <span className="block primary-light ">Planet</span>
                     </h1>
                     <p className="mt-6 max-w-lg mx-auto text-center text-xl text-white sm:max-w-3xl">
                       Easily consolidate your pensions into one simpler and
