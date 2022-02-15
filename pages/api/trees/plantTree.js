@@ -6,10 +6,16 @@ export default function handler(req, res) {
     return;
   }
 
+  if (process.env.NODE_ENV === 'production') {
+    const api_key = process.env.DIGITAL_HUMANI_API_KEY
+  } else {
+    const api_key = process.env.DIGITAL_HUMANI_API_KEY_SANDBOX
+  }
+
   const body = req.body;
 
   var myHeaders = new Headers();
-  myHeaders.append("X-Api-Key", process.env.DIGITAL_HUMANI_API_KEY_SANDBOX);
+  myHeaders.append("X-Api-Key", api_key);
   myHeaders.append("Content-Type", "application/json");
 
   const tree = {
