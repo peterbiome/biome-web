@@ -6,16 +6,10 @@ export default function handler(req, res) {
     return;
   }
 
-  if (process.env.NODE_ENV === 'production') {
-    const api_key = process.env.DIGITAL_HUMANI_API_KEY
-  } else {
-    const api_key = process.env.DIGITAL_HUMANI_API_KEY_SANDBOX
-  }
-
   const body = req.body;
 
   var myHeaders = new Headers();
-  myHeaders.append("X-Api-Key", api_key);
+  myHeaders.append("X-Api-Key", (process.env.NODE_ENV === 'production') ? process.env.DIGITAL_HUMANI_API_KEY : process.env.DIGITAL_HUMANI_API_KEY_SANDBOX);
   myHeaders.append("Content-Type", "application/json");
 
   const tree = {
@@ -36,6 +30,7 @@ export default function handler(req, res) {
 
   fetch("https://api.sandbox.digitalhumani.com/tree", requestOptions)
     .then((response) => {
+      console.log("Tree planted!");
       res.status(200).send({ message: response });
     })
     .catch((error) => {

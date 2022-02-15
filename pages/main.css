@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+a {
+  text-decoration: none !important;
+}
+
+strong {
+  color: #0F6484;
+}
+
+
+@layer base {
+  h2, h3, h1, h4 {
+    font-family: 'Baloo 2', sans;
+  }
+  
+}

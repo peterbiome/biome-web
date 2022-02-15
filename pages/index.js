@@ -101,7 +101,7 @@ export default function Home() {
                     <div className="absolute inset-0 bg-gradient-to-t from-black bg-secondary-light opacity-50" />
                   </div>
                   <div className="relative px-4 py-16 sm:px-6 sm:py-24 lg:py-32 lg:px-8">
-                    <h1 className="text-center text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
+                    <h1 className="text-center text-5xl font-heading font-bold tracking-tight sm:text-5xl lg:text-7xl">
                       <span className="block text-grey">Invest in our</span>
                       <span className="block text-grey ">
                         Planet
@@ -136,11 +136,11 @@ export default function Home() {
             {/* Logo cloud */}
             <div className="bg-gray-100">
               <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
-                <p className="text-center text-sm font-semibold uppercase text-gray-500 tracking-wide">
+                {/* <p className="text-center text-sm font-heading uppercase text-gray-500 tracking-wide">
                   Partnered with
-                </p>
+                </p> */}
                 <div className="mt-8 grid grid-cols-2 gap-8 md:grid-cols-5 lg:grid-cols-4">
-                  <div className="mt-2 col-span-2 flex justify-center md:col-span-3 lg:col-span-1">
+                  {/* <div className="mt-2 col-span-2 flex justify-center md:col-span-3 lg:col-span-1">
                     <img
                       className="h-12"
                       src="/OneTreePlanted_Key Logo_Long_Black.png"
@@ -169,7 +169,7 @@ export default function Home() {
                       src="/winterflood-securities-logo.png"
                       alt="Winterflood logo"
                     />
-                  </div>
+                  </div> */}
                   {/* <div className="col-span-1 flex justify-center md:col-span-2 md:col-start-2 lg:col-span-1">
                     <img
                       className="h-12"
@@ -269,7 +269,7 @@ export default function Home() {
                   </span>
                 </div>
                 <div className="mt-6">
-                  <h2 className="text-3xl font-extrabold tracking-tight text-secondary">
+                  <h2 className="text-4xl font-heading font-bold tracking-tight text-secondary">
                     Easily consolidate
                   </h2>
                   <p className="mt-4 text-lg text-gray-500">
@@ -333,12 +333,12 @@ export default function Home() {
                   </span>
                 </div>
                 <div className="mt-6">
-                  <h2 className="text-3xl font-extrabold tracking-tight text-secondary">
+                  <h2 className="text-4xl font-heading font-bold tracking-tight text-secondary">
                     Choose your green pension strategy
                   </h2>
                   <p className="mt-4 text-lg text-gray-500">
-                    Choose either a reccommended strategy for you or choose from
-                    a number of our sustainable pension plans. Green plans,
+                    Choose from
+                    a number of our sustainable pension plans,
                     without the comprimise.
                   </p>
                   <div className="mt-6">
@@ -378,7 +378,7 @@ export default function Home() {
                   </span>
                 </div>
                 <div className="mt-6">
-                  <h2 className="text-3xl font-extrabold tracking-tight text-secondary">
+                  <h2 className="text-4xl font-heading font-bold tracking-tight text-secondary">
                     Gain Full Transparency
                   </h2>
                   <p className="mt-4 text-lg text-gray-500">
@@ -442,12 +442,12 @@ export default function Home() {
                   </span>
                 </div>
                 <div className="mt-6">
-                  <h2 className="text-3xl font-extrabold tracking-tight text-secondary">
+                  <h2 className="text-4xl font-heading font-bold tracking-tight text-secondary">
                     Stay in control
                   </h2>
                   <p className="mt-4 text-lg text-gray-500">
                     Maintain full control over your pension, switch plans & top
-                    up when needed.
+                    up when you want.
                   </p>
                   {/* <div className="mt-6">
                   <a
@@ -653,7 +653,7 @@ export default function Home() {
                     </div>
 
                     <footer className="mt-4">
-                      <p className="hover:underline text-base font-semibold text-white">
+                      <p className="hover:underline text-base font-heading font-bold text-white">
                         Research by{" "}
                         <a href="https://www.makemymoneymatter.co.uk">
                           Make My Money Matter
@@ -668,10 +668,10 @@ export default function Home() {
           <div className="relative mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-0">
             <div className="pt-12 sm:pt-16 lg:pt-20">
               <h2 className="text-3xl text-gray-900 font-extrabold tracking-tight sm:text-4xl text-secondary">
-                <span className="text-secondary">What are green pensions?</span>
+                <span className="text-secondary font-heading font-bold">What are green pensions?</span>
               </h2>
               <div className="mt-6 text-gray-500 space-y-6">
-                <p className="text-lg">
+                <p className="text-base leading-7">
                   The typical UK pension fund has up to 1/3 of its investments
                   in companies that harm people and the planet (research from
                   The Path).

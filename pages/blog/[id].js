@@ -215,11 +215,11 @@ export default function Article({ content, page }) {
           <img
             className="h-96 w-full rounded-lg object-cover"
             src={page.cover?.external?.url || ""}
-            alt="Trees"
+            alt="Cover photo"
           />
           <div className="text-lg max-w-prose mx-auto">
             <h1>
-              <span className="mt-20 mb-10 block text-3xl text-center leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+              <span className="mt-20 mb-10 block text-4xl text-center leading-8 font-extrabold font-heading tracking-tight text-secondary sm:text-5xl">
                 {page.properties["Title"].title[0].plain_text}
               </span>
             </h1>

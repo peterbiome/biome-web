@@ -68,7 +68,7 @@ function Header() {
                       "group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                     )}
                   >
-                    <span>Green Pensions</span>
+                    <span className="font-heading text-xl">Green Pensions</span>
                     <ChevronDownIcon
                       className={classNames(
                         open ? "text-gray-600" : "text-gray-400",
@@ -103,7 +103,7 @@ function Header() {
                                 />
                               </div>
                               <div className="ml-4">
-                                <p className="text-base font-medium text-gray-900">
+                                <p className="text-xl font-medium font-heading text-gray-900">
                                   {item.name}
                                 </p>
                                 <p className="mt-1 text-sm text-gray-500">
@@ -124,7 +124,7 @@ function Header() {
               <a
                 key={item.name}
                 href={item.href}
-                className="text-base font-medium text-gray-500 hover:text-gray-900"
+                className="text-xl font-medium font-heading text-gray-500 hover:text-gray-900"
               >
                 {item.name}
               </a>

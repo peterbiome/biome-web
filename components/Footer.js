@@ -46,7 +46,7 @@ function Footer() {
             <div key={item.name} className="px-5 py-2">
               <a
                 href={item.href}
-                className="text-base text-gray-600 hover:text-gray-900"
+                className="text-base text-gray-600 font-heading hover:text-gray-900"
               >
                 {item.name}
               </a>
@@ -66,7 +66,7 @@ function Footer() {
             </a>
           ))}
         </div>
-        <p className="mt-8 text-center text-base text-gray-600">
+        <p className="mt-8 text-center font-heading text-xl text-gray-600">
           🌎 Biome Invest Limited
         </p>
       </div>

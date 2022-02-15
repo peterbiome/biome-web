@@ -117,7 +117,7 @@ function WaitingList() {
             </div>
             <div className="relative">
               <div className="sm:text-center">
-                <h2 className="text-3xl font-extrabold text-white tracking-tight sm:text-4xl">
+                <h2 className="text-4xl font-extrabold font-heading text-white tracking-tight sm:text-5xl">
                   Get notified when we&rsquo;re launching.
                 </h2>
                 <div className="m-10 col-span-1 flex justify-center md:col-span-2 lg:col-span-1">

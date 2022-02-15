@@ -52,7 +52,7 @@ export default function Faqs(faqsArray) {
       <div className="bg-gray-50">
         <div className="max-w-7xl mx-auto py-12 px-4 sm:py-16 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto divide-y-2 divide-gray-200">
-            <h2 className="text-center text-3xl font-extrabold text-secondary sm:text-4xl">
+            <h2 className="mb-16 text-center text-3xl font-extrabold font-heading text-secondary sm:text-5xl">
               Frequently asked questions
             </h2>
             <dl className="mt-6 space-y-6 divide-y divide-gray-200">
@@ -62,7 +62,7 @@ export default function Faqs(faqsArray) {
                     <>
                       <dt className="text-lg">
                         <Disclosure.Button className="text-left w-full flex justify-between items-start text-gray-400">
-                          <span className="font-medium text-gray-900">
+                          <span className="font-medium font-heading text-xl text-gray-900">
                             {faq.question}
                           </span>
                           <span className="ml-6 h-7 flex items-center">
