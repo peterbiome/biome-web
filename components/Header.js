@@ -24,9 +24,9 @@ const navigation = [
 
 const solutions = [
   {
-    name: "Why pensions?",
+    name: "What are green pensions?",
     description:
-      "Why are pensions the best way to make an impact?",
+      "Why are they and why are they the best way to make an impact?",
     href: "/blog/b3b0fd72-33dc-48be-98ff-19cca6eaf789",
     icon: GlobeIcon,
   },
