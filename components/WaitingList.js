@@ -72,7 +72,7 @@ function WaitingList() {
                   width={4}
                   height={4}
                   rx={4}
-                  className="text-primary-light"
+                  className="text-tertiary-light"
                   fill="currentColor"
                 />
               </pattern>
@@ -110,14 +110,14 @@ function WaitingList() {
                     </svg> */}
               <img
                 className="h-full w-full object-cover bg-primary"
-                src="/trees-hero.jpg"
+                src="/farm-hero.jpg"
                 alt="Trees"
               />
-              <div className="absolute inset-0 bg-black/20" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black bg-secondary opacity-70" />
             </div>
             <div className="relative">
               <div className="sm:text-center">
-                <h2 className="text-3xl font-extrabold text-white tracking-tight sm:text-4xl">
+                <h2 className="text-4xl font-extrabold font-heading text-white tracking-tight sm:text-5xl">
                   Get notified when we&rsquo;re launching.
                 </h2>
                 <div className="m-10 col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
@@ -178,7 +178,7 @@ function WaitingList() {
                 <div className="mt-4 sm:mt-0 sm:ml-3">
                   <button
                     type="submit"
-                    className="block w-full rounded-md border border-white px-5 py-3 bg-primary text-base font-medium text-white shadow hover:bg-primary-light focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-indigo-600 sm:px-10"
+                    className="block w-full rounded-md  py-3 bg-primary text-base font-medium text-white shadow hover:bg-tertiary sm:px-10"
                   >
                     Yes, I want to invest in our planet
                   </button>

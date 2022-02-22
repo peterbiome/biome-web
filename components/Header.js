@@ -24,16 +24,16 @@ const navigation = [
 
 const solutions = [
   {
-    name: "Impact of green pensions",
+    name: "Why pensions?",
     description:
       "Why are pensions the best way to make an impact?",
     href: "/blog/b3b0fd72-33dc-48be-98ff-19cca6eaf789",
     icon: GlobeIcon,
   },
   {
-    name: "Our green plans",
-    description: "See our plans on offer and their fees",
-    href: "/blog/b1cea878-3cb5-41b4-849d-76f8be8f462f",
+    name: "Greenwashing",
+    description: "What is greenwashing?",
+    href: "/blog/21ce3df1-cc92-4e94-84a2-f15a15c95434",
     icon: CurrencyPoundIcon,
   },
 ];
@@ -45,10 +45,9 @@ function Header() {
         <div className="flex justify-between items-center max-w-7xl mx-auto px-4 py-6 sm:px-6 md:justify-start md:space-x-10 lg:px-8">
           <div className="flex justify-start lg:w-0 lg:flex-1">
             <a href="/">
-              <span className="sr-only">Workflow</span>
               <img
                 className="h-8 w-auto sm:h-10"
-                src="/biome_horizontal-c1.png"
+                src="/biome-horizontal-logo.png"
                 alt="Biome Logo"
               />
             </a>
@@ -69,7 +68,7 @@ function Header() {
                       "group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                     )}
                   >
-                    <span>Green Pensions</span>
+                    <span className="font-heading text-xl">Green Pensions</span>
                     <ChevronDownIcon
                       className={classNames(
                         open ? "text-gray-600" : "text-gray-400",
@@ -97,14 +96,14 @@ function Header() {
                               href={item.href}
                               className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
                             >
-                              <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-primary text-white sm:h-12 sm:w-12">
+                              <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-primary hover:bg-tertiary text-white sm:h-12 sm:w-12">
                                 <item.icon
                                   className="h-6 w-6"
                                   aria-hidden="true"
                                 />
                               </div>
                               <div className="ml-4">
-                                <p className="text-base font-medium text-gray-900">
+                                <p className="text-xl font-medium font-heading text-gray-900">
                                   {item.name}
                                 </p>
                                 <p className="mt-1 text-sm text-gray-500">
@@ -125,7 +124,7 @@ function Header() {
               <a
                 key={item.name}
                 href={item.href}
-                className="text-base font-medium text-gray-500 hover:text-gray-900"
+                className="text-xl font-medium font-heading text-gray-500 hover:text-gray-900"
               >
                 {item.name}
               </a>
@@ -137,7 +136,7 @@ function Header() {
                     </a> */}
             <a
               href="#sign-up"
-              className="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-primary hover:bg-primary-light"
+              className="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-primary hover:bg-tertiary"
             >
               Sign up
             </a>
@@ -163,7 +162,7 @@ function Header() {
                   <div>
                     <img
                       className="h-8 w-auto"
-                      src="biome_icon-c1.png"
+                      src="/biome-horizontal-logo.png"
                       alt="Biome Logo"
                     />
                   </div>
@@ -182,7 +181,7 @@ function Header() {
                         href={item.href}
                         className="-m-3 p-3 flex items-center rounded-lg hover:bg-gray-50"
                       >
-                        <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-primary text-white">
+                        <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-primary hover:bg-tertiary text-white">
                           <item.icon className="h-6 w-6" aria-hidden="true" />
                         </div>
                         <div className="ml-4 text-base font-medium text-gray-900">
@@ -208,7 +207,7 @@ function Header() {
                 <div className="mt-6">
                   <a
                     href="#sign-up"
-                    className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-primary hover:bg-primary-light"
+                    className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-primary hover:bg-tertiary"
                   >
                     Join waiting list
                   </a>

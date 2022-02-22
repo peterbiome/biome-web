@@ -100,7 +100,7 @@ export default function Article({ content, page }) {
         <link rel="icon" href="/favicon.png" />
         <meta
           name="description"
-          content={page.properties["Description"].rich_text[0].text.content}
+          content={page.properties["Description"].rich_text[0]?.text.content}
         />
       </Head>
       <Header /> 
@@ -132,7 +132,7 @@ export default function Article({ content, page }) {
                     width={4}
                     height={4}
                     rx={4}
-                    className="text-primary-light"
+                    className="text-tertiary-light"
                     fill="currentColor"
                   />
                 </pattern>
@@ -165,7 +165,7 @@ export default function Article({ content, page }) {
                     width={4}
                     rx={4}
                     height={4}
-                    className="text-primary-light"
+                    className="text-tertiary-light"
                     fill="currentColor"
                   />
                 </pattern>
@@ -198,7 +198,7 @@ export default function Article({ content, page }) {
                     width={4}
                     height={4}
                     rx={4}
-                    className="text-primary-light"
+                    className="text-tertiary-light"
                     fill="currentColor"
                   />
                 </pattern>
@@ -211,21 +211,20 @@ export default function Article({ content, page }) {
             </svg>
           </div>
         </div>
-        <div className="relative px-4 sm:px-6 lg:px-8">
+        <div className="relative px-4 sm:px-6 lg:px-8 mx-auto lg:max-w-7xl ">
           <img
             className="h-96 w-full rounded-lg object-cover"
             src={page.cover?.external?.url || ""}
-            alt="Trees"
+            alt="Cover photo"
           />
           <div className="text-lg max-w-prose mx-auto">
             <h1>
-              <span className="mt-20 mb-10 block text-3xl text-center leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+              <span className="mt-20 mb-10 block text-4xl text-center leading-8 font-extrabold font-heading tracking-tight text-secondary sm:text-5xl">
                 {page.properties["Title"].title[0].plain_text}
               </span>
             </h1>
             <div className="mt-6 prose prose-indigo prose-lg text-gray-500 mx-auto">
-              <Render blocks={content} />
-
+              <Render blocks={content} classNames/>
               {/* {getPageDisplay()} */}
               {/* <figure>
                 <img

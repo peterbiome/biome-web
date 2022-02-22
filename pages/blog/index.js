@@ -53,7 +53,7 @@ export default function Blog({ posts }) {
         </div>
         <div className="relative max-w-7xl mx-auto">
           <div className="text-center">
-            <h2 className="text-3xl tracking-tight font-extrabold text-gray-900 sm:text-4xl">
+            <h2 className="text-3xl tracking-tight font-extrabold font-heading text-secondary sm:text-4xl">
               From the blog
             </h2>
             <p className="mt-3 max-w-2xl mx-auto text-xl text-gray-500 sm:mt-4">
@@ -76,16 +76,16 @@ export default function Blog({ posts }) {
                   </div>
                   <div className="flex-1 bg-white p-6 flex flex-col justify-between">
                     <div className="flex-1">
-                      <p className="text-sm font-medium text-primary">
-                        {post.properties["Tags"].select.name}
+                      <p className="text-base font-medium font-heading text-tertiary">
+                        {post.properties["Tags"].select?.name}
                       </p>
                       <div className="block mt-2">
-                        <p className="text-xl font-semibold text-gray-900">
+                        <p className="text-2xl font-extrabold font-heading text-gray-900">
                           {post.properties["Title"].title[0].text.content}
                         </p>
                         <p className="mt-3 text-base text-gray-500">
                           {
-                            post.properties["Description"].rich_text[0].text
+                            post.properties["Description"].rich_text[0]?.text
                               .content
                           }
                         </p>
@@ -94,18 +94,18 @@ export default function Blog({ posts }) {
                     <div className="mt-6 flex items-center">
                       <div className="flex-shrink-0">
                         <span className="sr-only">
-                          {post.properties["Edited by"].last_edited_by.name}
+                          {post.properties["Editor"].people[0]?.name}
                         </span>
                         <img
                           className="h-10 w-10 rounded-full"
-                          alt={post.properties["Edited by"].last_edited_by.name}
-                          src="https://s3-us-west-2.amazonaws.com/public.notion-static.com/f92f608a-ab8f-4bd5-9d7d-27c4e2f0064b/1628589731063.jpeg"
+                          alt={post.properties["Editor"].people[0]?.name}
+                          src={post.properties["Editor"].people[0]?.avatar_url}
                         />
                       </div>
                       <div className="ml-3">
                         <p className="text-sm font-medium text-gray-900">
                           <a className="hover:underline">
-                            {post.properties["Edited by"].last_edited_by.name}
+                            {post.properties["Editor"].people[0]?.name}
                           </a>
                         </p>
                         <div className="flex space-x-1 text-sm text-gray-500">
