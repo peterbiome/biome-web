@@ -225,7 +225,6 @@ export default function Article({ content, page }) {
             </h1>
             <div className="mt-6 prose prose-indigo prose-lg text-gray-500 mx-auto">
               <Render blocks={content} classNames/>
-
               {/* {getPageDisplay()} */}
               {/* <figure>
                 <img
