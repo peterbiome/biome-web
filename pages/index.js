@@ -276,14 +276,14 @@ export default function Home() {
                     Tell us about your pension history and we'll transfer
                     everything over automatically.
                   </p>
-                  <div className="mt-6">
+                  {/* <div className="mt-6">
                     <a
                       href="#"
                       className="inline-flex px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-primary hover:bg-tertiary"
                     >
                       See more
                     </a>
-                  </div>
+                  </div> */}
                 </div>
               </div>
               {/* <div className="mt-8 border-t border-gray-200 pt-6">
@@ -338,17 +338,17 @@ export default function Home() {
                   </h2>
                   <p className="mt-4 text-lg text-gray-500">
                     Choose from
-                    a number of our sustainable pension plans,
+                    a number of our green pension plans,
                     without the comprimise.
                   </p>
-                  <div className="mt-6">
+                  {/* <div className="mt-6">
                     <a
                       href="'/blog/b1cea878-3cb5-41b4-849d-76f8be8f462f?t=Our%20green%20plans'"
                       className="inline-flex px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-primary hover:bg-tertiary"
                     >
                       See more
                     </a>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>
@@ -463,7 +463,7 @@ export default function Home() {
             <div className="mt-12 sm:mt-16 lg:mt-0 lg:col-start-1">
               <div className="justify-center">
                 <img
-                  className="mx-0"
+                  className="mx-0 w-80"
                   src="homepage_timeline.png"
                   alt="Customer profile user interface"
                 />

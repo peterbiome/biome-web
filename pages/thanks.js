@@ -39,7 +39,7 @@ export default function Thanks() {
                 </p>
                 <p>
                   We are working on the final touches for our app and awaiting
-                  FCA approval. As soon as we are ready, well reach out to our
+                  FCA approval. As soon as we are ready, we'll reach out to our
                   waiting list.
                 </p>
                 {/* <a

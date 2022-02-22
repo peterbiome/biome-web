@@ -56,9 +56,9 @@ export default function Blog({ posts }) {
             <h2 className="text-3xl tracking-tight font-extrabold font-heading text-secondary sm:text-4xl">
               From the blog
             </h2>
-            <p className="mt-3 max-w-2xl mx-auto text-xl text-gray-500 sm:mt-4">
+            {/* <p className="mt-3 max-w-2xl mx-auto text-xl text-gray-500 sm:mt-4">
               Checkout our recent articles, updated weekly.
-            </p>
+            </p> */}
           </div>
           <div className="mt-12 max-w-lg mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none">
             {posts.map((post) => (
